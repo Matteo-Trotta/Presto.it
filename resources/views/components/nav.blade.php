@@ -20,6 +20,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">HOME</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('article.create') }}">Aggiungi annuncio</a>
+                </li>
                 @guest
 
                     
