@@ -15,6 +15,8 @@ class CreateArticle extends Component
     public $price;
     #[Validate('required', message: 'Il prezzo è richiesto')]
     public $description;
+    #[Validate('required', message: 'La Categoria è richiesta')]
+    public $category;
 
     public function createArticle(){
 
@@ -24,6 +26,7 @@ class CreateArticle extends Component
             'title'=> $this->title,
             'price' => $this->price,
             'body' => $this->description,
+            'category' => $this->category,
         ]);
         
         $this->reset();
