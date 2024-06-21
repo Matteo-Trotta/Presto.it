@@ -1,0 +1,58 @@
+:root{
+    --colorOne: #231F20;
+    --colorTwo: #FFEBC6;
+    --colorThree: #388697;
+
+}
+
+.bgColorOne{
+    background-color: var(--colorOne);
+}
+.bgColorTwo{
+    background-color: var(--colorTwo);
+}
+.bgColorThree{
+    background-color: var(--colorThree);
+}
+.ColorOne{
+    color: var(--colorOne);
+}
+.ColorTwo{
+    color: var(--colorTwo);
+}
+.ColorThree{
+    color: var(--colorThree);
+}
+
+h1{
+    color:var(--colorThree) !important;
+}
+/* Aggiungi articolo */
+.form-control{
+    border: none !important;
+    border-bottom: 1px solid var(--colorThree) !important;
+    background-color: var(--colorOne) !important;
+    
+    color: var(--colorThree) !important;
+}
+/* input, select, textarea{
+   
+    
+} */
+
+select{
+    color: var(--colorThree) !important;
+
+}
+label{
+    color: var(--colorTwo) !important;
+}
+/* label, .catName{
+    
+} */
+
+.fa-chevron-down{
+    right: 5px;
+    bottom: 10px;
+    color: var(--colorThree);
+}

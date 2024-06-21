@@ -7,7 +7,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Titolo</label>
-                    <input type="text" class="form-control" wire:model.blur="title">
+                    <input type="text" class="form-control shadow-none" wire:model.blur="title">
                     @error('title')
                         <span class="error">{{ $message }}</span>
                     @enderror
@@ -20,19 +20,21 @@
 
                 <div class="mb-3">
                     <label class="form-label">Prezzo</label>
-                    <input type="number" class="form-control" wire:model.blur="price">
+                    <input type="number" class="form-control shadow-none" wire:model.blur="price">
                     @error('price')
                         <span class="error">{{ $message }}</span>
                     @enderror
 
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 position-relative">
+                    <i class="fa-solid fa-chevron-down position-absolute"></i>
                     <label class="form-label">Category</label>
-                    <select wire:model.blur="category" class="form-select">
+                    <select wire:model.blur="category" class="form-control shadow-none">
+                        
                         @foreach ($categories as $category)
-                            <option value="  {{ $category->id }}">
-                                {{ $category->name }}
+                            <option value="{{ $category->id }}" id="{{$category->id}}" selected>
+                                <p class="catName">{{ $category->name }}</p>
                             </option>
                         @endforeach
                     </select>
@@ -45,8 +47,8 @@
 
                 <div class="mb-3">
                     <label class="form-label">Descrizione</label>
-                    <textarea class="form-control" wire:model.blur="description" id="" cols="30" rows="10"></textarea>
-                    @error('description')
+                    <textarea class="form-control shadow-none" wire:model.blur="body" id="" cols="30" rows="10"></textarea>
+                    @error('body')
                         <span class="error">{{ $message }}</span>
                     @enderror
 

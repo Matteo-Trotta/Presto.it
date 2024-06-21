@@ -27,7 +27,7 @@ rel="stylesheet"
     <x-nav/>
     
 
-    <div class="min-vh-100">
+    <div class="min-vh-100 bgColorOne">
         {{$slot}}
     </div>
     

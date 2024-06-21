@@ -14,7 +14,7 @@ class CreateArticle extends Component
     #[Validate('required', message: 'Il prezzo è richiesto')]
     public $price;
     #[Validate('required', message: 'Il prezzo è richiesto')]
-    public $description;
+    public $body;
     #[Validate('required', message: 'La Categoria è richiesta')]
     public $category;
 
@@ -25,11 +25,12 @@ class CreateArticle extends Component
         Auth::user()->articles()->create([
             'title'=> $this->title,
             'price' => $this->price,
-            'body' => $this->description,
-            'category' => $this->category,
+            'body' => $this->body,
+            'category_id' => $this->category,
+
         ]);
+
         
-        $this->reset();
         session()->flash('message', 'Annuncio pubblicato');
         return redirect(route('home'));
         

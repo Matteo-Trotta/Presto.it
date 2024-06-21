@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    public function category(Category $category){
+        return view('article.category', compact('category'));
+    }
     /**
      * Display a listing of the resource.
      */
