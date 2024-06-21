@@ -1,13 +1,6 @@
 <x-layout>
-    @if (session('message'))
-        <div class="alert alert-success mt-2">
-            {{ session('message') }}
-        </div>
-    @endif
 
-
-
-    <x-header title='Home page' />
+    <x-header title='Tutti gli Annunci'/>
 
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
@@ -19,9 +12,5 @@
 
         </div>
     </div>
-
-
-
-
 
 </x-layout>
