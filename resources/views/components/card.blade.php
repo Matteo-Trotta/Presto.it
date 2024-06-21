@@ -1,4 +1,4 @@
-<div class="card mb-3">
+<a href="{{ route('article.show', compact('article')) }}"><div class="card mb-3">
     <div class="row g-0">
         <div class="col-md-4">
             <img class="img-fluid" src="https://picsum.photos/200" class="img-fluid rounded-start" alt="...">
@@ -14,3 +14,5 @@
         </div>
     </div>
 </div>
+</a>
+

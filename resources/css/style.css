@@ -1,58 +1,138 @@
-:root{
+:root {
     --colorOne: #231F20;
     --colorTwo: #FFEBC6;
     --colorThree: #388697;
 
 }
 
-.bgColorOne{
+.bgColorOne {
     background-color: var(--colorOne);
 }
-.bgColorTwo{
+
+.bgColorTwo {
     background-color: var(--colorTwo);
 }
-.bgColorThree{
+
+.bgColorThree {
     background-color: var(--colorThree);
 }
-.ColorOne{
+
+.ColorOne {
     color: var(--colorOne);
 }
-.ColorTwo{
+
+.ColorTwo {
     color: var(--colorTwo);
 }
-.ColorThree{
+
+.ColorThree {
     color: var(--colorThree);
 }
 
-h1{
-    color:var(--colorThree) !important;
+h1 {
+    color: var(--colorThree) !important;
 }
+
 /* Aggiungi articolo */
-.form-control{
+.form-control {
     border: none !important;
     border-bottom: 1px solid var(--colorThree) !important;
     background-color: var(--colorOne) !important;
-    
+
     color: var(--colorThree) !important;
 }
+
 /* input, select, textarea{
    
     
 } */
 
-select{
+select {
     color: var(--colorThree) !important;
 
 }
-label{
+
+label {
     color: var(--colorTwo) !important;
 }
+
 /* label, .catName{
     
 } */
 
-.fa-chevron-down{
+.fa-chevron-down {
     right: 5px;
     bottom: 10px;
     color: var(--colorThree);
 }
+
+
+/* INIZIO SWIPER */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    background: #000;
+    color: #000;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FINE SWIPER */
