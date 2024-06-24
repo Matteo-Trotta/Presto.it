@@ -172,3 +172,14 @@ body {
     text-decoration: underline var(--colorTwo) !important;
     
 }
+
+.bgHomeImage{
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.vh-50{
+    height: 80vh;
+}

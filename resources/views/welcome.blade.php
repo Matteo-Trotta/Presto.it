@@ -3,7 +3,8 @@
 
 
 
-    <x-header title='Home page' />
+    <x-header
+     title='Presto.it' />
     @if (session('message'))
         <div class="alert alert-success mt-2">
             {{ session('message') }}
