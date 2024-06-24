@@ -23,9 +23,7 @@
                 <li class="nav-item">
                     <a class="nav-link ColorTwo fs-5 fw-semibold" href="{{ route('article.index') }}">Index</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link ColorTwo fs-5 fw-semibold" href="{{ route('article.create') }}">Aggiungi annuncio</a>
-                </li>
+
                 @guest
 
 

@@ -145,16 +145,30 @@ body {
     transition: 0.5s linear;
 }
 
-.navbar{
+.navbar {
     transition: 0.5s linear;
 
 }
-.btn-outline{
+
+.btn-outline {
     border: 1px solid var(--colorThree);
     color: var(--colorThree);
 }
 
-.btn-outline:hover{
+.btn-outline:hover {
     border: 1px solid var(--colorTwo) !important;
     color: var(--colorTwo) !important;
+}
+
+.borderimg{
+    border: 5px solid var(--colorThree)!important;    
+}
+
+.shadowcard{
+    box-shadow:2px 2px 20px var(--colorTwo);
+}
+
+.anchorCard:hover{
+    text-decoration: underline var(--colorTwo) !important;
+    
 }
