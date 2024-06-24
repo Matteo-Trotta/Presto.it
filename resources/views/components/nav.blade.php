@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-light bgColorThree ColorTwo fixed-top">
     <!-- Container wrapper -->
     <div class="container-fluid">
         <!-- Toggle button -->
@@ -16,15 +16,15 @@
                     alt="MDB Logo" loading="lazy" />
             </a>
             <!-- Left links -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">HOME</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item ">
+                    <a class="nav-link ColorTwo fs-5 fw-semibold" href="{{ route('home') }}">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('article.index') }}">Index</a>
+                    <a class="nav-link ColorTwo fs-5 fw-semibold" href="{{ route('article.index') }}">Index</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('article.create') }}">Aggiungi annuncio</a>
+                    <a class="nav-link ColorTwo fs-5 fw-semibold" href="{{ route('article.create') }}">Aggiungi annuncio</a>
                 </li>
                 @guest
 
