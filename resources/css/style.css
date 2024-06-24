@@ -2,6 +2,8 @@
     --colorOne: #231F20;
     --colorTwo: #FFEBC6;
     --colorThree: #388697;
+    --colorfour: #F7D33B;
+
 
 }
 
@@ -15,6 +17,10 @@
 
 .bgColorThree {
     background-color: var(--colorThree);
+}
+
+.bgColorFour {
+    background-color: var(--colorfour);
 }
 
 .ColorOne {
@@ -161,10 +167,10 @@ body {
 }
 
 .borderimg{
-    border: 5px solid var(--colorThree)!important;    
+    border: 5px solid var(--colorfour)!important;    
 }
 
-.shadowcard{
+.shadowimg{
     box-shadow:2px 2px 20px var(--colorTwo);
 }
 
@@ -182,4 +188,8 @@ body {
 
 .vh-50{
     height: 80vh;
+}
+
+.shadowcard{
+    box-shadow:2px 2px 8px var(--colorOne);   
 }

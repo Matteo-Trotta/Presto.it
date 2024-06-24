@@ -25,7 +25,7 @@
     <x-nav />
 
 
-    <div class="min-vh-100 bgColorOne">
+    <div class="min-vh-100 bgColorTwo">
         {{ $slot }}
     </div>
 
