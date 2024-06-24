@@ -8,7 +8,7 @@
       </div>
       <div class="col-md-7  text-center p-3 ">
         <div class="card-body ">
-            <h5 class="card-title fs-3">{{ $article->title }}</h5>
+            <h5 class="card-title fs-3 expletus">{{ $article->title }}</h5>
             <h5 class="card-title fs-4 text-warning">{{ $article->price }} €</h5>
             <h5 class="card-title fs-4"><a class=" anchorCard ColorTwo text-decoration-none"
                     href="{{ route('article.category', $article->category) }}">{{ $article->category->name }}</a>

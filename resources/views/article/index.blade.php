@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-header title='Tutti gli Annunci'/>
+    <x-header2 title='Tutti gli Annunci'/>
 
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
