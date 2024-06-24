@@ -149,3 +149,12 @@ body {
     transition: 0.5s linear;
 
 }
+.btn-outline{
+    border: 1px solid var(--colorThree);
+    color: var(--colorThree);
+}
+
+.btn-outline:hover{
+    border: 1px solid var(--colorTwo) !important;
+    color: var(--colorTwo) !important;
+}
