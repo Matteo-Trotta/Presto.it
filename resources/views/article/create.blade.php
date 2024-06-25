@@ -1,5 +1,5 @@
 <x-layout>
-    <x-header 
+    <x-header2 
     title='Aggiungi annuncio'
     />
     <livewire:create-article />

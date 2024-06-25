@@ -3,7 +3,7 @@
     <!-- Container wrapper -->
     <div class="container-fluid">
         <a class="navbar-brand mt-2 mt-lg-0" href="#">
-            <img src="/img/logogiallo.png" class="" height="50" alt="" loading="lazy" />
+            <img src="/img/logogiallo2.png" class="" height="50" alt="" loading="lazy" />
         </a>
         
         @Auth
@@ -93,12 +93,12 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
         
         
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">Registrati</a>
+            <a class="nav-link ColorTwo fs-5 fw-semibold " href="{{ route('register') }}">Registrati</a>
         </li>
         
         
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">Accedi</a>
+            <a class="nav-link ColorTwo fs-5 fw-semibold " href="{{ route('login') }}">Accedi</a>
         </li>
         @else
     </ul>

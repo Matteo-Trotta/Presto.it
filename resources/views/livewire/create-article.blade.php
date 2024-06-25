@@ -13,14 +13,9 @@
                     @enderror
                 </div>
 
-                {{-- <div class="mb-3">
-                    <label class="form-label">Cognome</label>
-                    <input type="email" class="form-control" name="surname">
-                </div> --}}
-
                 <div class="mb-3">
                     <label class="form-label">Prezzo</label>
-                    <input type="number" class="form-control shadow-none" wire:model.blur="price">
+                    <input type="text" class="form-control shadow-none" wire:model.blur="price">
                     @error('price')
                         <span class="error">{{ $message }}</span>
                     @enderror
@@ -53,7 +48,9 @@
                     @enderror
 
                 </div>
-                <button type="submit" class="btn btn-primary">Pubblica annuncio</button>
+                <div class="mb-3 text-center">
+                <button type="submit" class="btn btn-primary btnSubmit">Pubblica annuncio</button>
+                </div>
             </form>
         </div>
     </div>

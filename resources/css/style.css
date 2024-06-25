@@ -63,9 +63,9 @@ h1 {
 .form-control {
     border: none !important;
     border-bottom: 1px solid var(--colorThree) !important;
-    background-color: var(--colorOne) !important;
+    background-color: var(--colorTwo) !important;
 
-    color: var(--colorThree) !important;
+    color: var(--colorOne) !important;
 }
 
 /* input, select, textarea{
@@ -79,19 +79,32 @@ select {
 }
 
 label {
-    color: var(--colorTwo) !important;
+    color: var(--colorThree) !important;
+    font-family: "Expletus Sans", sans-serif;
 }
 
-/* label, .catName{
+.btnSubmit{
+    background-color: var(--colorTwo);
+    border: 1px solid var(--colorThree);
+    color: var(--colorThree);
+    font-family: "Expletus Sans", sans-serif;
+    font-weight: bold;
     
-} */
+}
+.btnSubmit:hover{
+    background-color: var(--colorfour);
+    border: 1px solid var(--colorfour);
+    color: var(--colorThree);
 
+}
 .fa-chevron-down {
     right: 5px;
     bottom: 10px;
     color: var(--colorThree);
 }
-
+.marginTop{
+    margin-top: 80px;
+}
 
 /* INIZIO SWIPER */
 
@@ -188,11 +201,11 @@ body {
 }
 
 .borderimg{
-    border: 5px solid var(--colorfour)!important;    
+    border: none !important;    
 }
 
 .shadowimg{
-    box-shadow:2px 2px 20px var(--colorTwo);
+    box-shadow:-2px 5px 10px var(--colorOne);
 }
 
 .anchorCard:hover{
@@ -213,4 +226,12 @@ body {
 
 .shadowcard{
     box-shadow:2px 2px 8px var(--colorOne);   
+}
+
+
+.borderImgProfile{
+    border: 2px solid var(--colorThree);
+    width: 50px;
+    height: 50px;
+
 }
