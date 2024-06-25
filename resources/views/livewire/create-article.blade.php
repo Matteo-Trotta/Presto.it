@@ -49,7 +49,7 @@
 
                 </div>
                 <div class="mb-3 text-center">
-                <button type="submit" class="btn btn-primary btnSubmit">Pubblica annuncio</button>
+                <button type="submit" class=" btnSubmit">Pubblica annuncio</button>
                 </div>
             </form>
         </div>

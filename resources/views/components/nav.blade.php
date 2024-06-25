@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bgColorThree ColorTwo fixed-top shadowcard">
     <!-- Container wrapper -->
     <div class="container-fluid">
-        <a class="navbar-brand mt-2 mt-lg-0" href="">
+        <a class="navbar-brand mt-lg-0" href="">
             <img src="/img/logogiallo2.png" class="" height="50" alt="" loading="lazy" />
         </a>
 
@@ -36,7 +36,7 @@
                 <div class="dropdown">
                     <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                         id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
-                        <img src="{{ Auth::user()->profile_photo_url }}" class="profile-photo rounded-circle" height="25"
+                        <img src="{{ Auth::user()->profile_photo_url }}" class="profile-photo rounded-circle" height="50"
                             alt="Black and White Portrait of a Man" loading="lazy" />
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
@@ -49,7 +49,7 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="{{route('article.create')}}">Aggiungi Annuncio</a>
+                            <a class="dropdown-item" href="{{ route('article.create') }}">Aggiungi Annuncio</a>
                         </li>
 
                         <li>
@@ -66,9 +66,9 @@
         @endauth
 
         <!-- Toggle button -->
-        <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent"
+        <button data-mdb-collapse-init class="navbar-toggler shadow-none" type="button" data-mdb-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars fs-1 ColorFour"></i>
         </button>
 
         <!-- Collapsible wrapper -->
@@ -137,7 +137,7 @@
                 <div class="dropdown">
                     <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                         id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
-                        <img src="{{ Auth::user()->profile_photo_url }}" class="profile-photo rounded-circle" height="25"
+                        <img src="{{ Auth::user()->profile_photo_url }}" class="profile-photo rounded-circle" height="80rem"
                             alt="Black and White Portrait of a Man" loading="lazy" />
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
@@ -149,25 +149,33 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="{{route('article.create')}}">Aggiungi Annuncio</a>
+                            <a class="dropdown-item" href="{{ route('article.create') }}">Aggiungi Annuncio</a>
                         </li>
-
 
                        
-
-                        
+                        @if (Auth::user()->is_revisor)
 
                         <li>
-                            <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <button class="dropdown-item text-danger" type="submit">Logout</button>
-                            </form>
-
+                            <a class="dropdown-item" href="{{ route('revisor.index') }}">Pannello revisore</a>
                         </li>
-                    </ul>
-                </div>
-            @endguest
-        </div>
+                        @endif
+                      
 
-    </div>
-</nav>
+
+
+
+
+                            <li>
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button class="dropdown-item text-danger" type="submit">Logout</button>
+                                </form>
+
+                            </li>
+                        </ul>
+                    </div>
+                @endguest
+            </div>
+
+        </div>
+    </nav>

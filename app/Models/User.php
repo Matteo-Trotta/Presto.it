@@ -55,6 +55,6 @@ class User extends Authenticatable
 {
     return $this->profile_photo_path
                 ? asset('storage/' . $this->profile_photo_path)
-                : asset('storage/profile-photos/defaultuser.webp');
+                : asset('/img/user_default.jpg');
 }
 }

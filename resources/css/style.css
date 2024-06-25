@@ -16,6 +16,11 @@ margin-top: 100px;
 .navbar a {
     font-family: "Raleway", sans-serif;
     font-weight: bold !important;
+    
+}
+.navbar a:hover{
+    color: var(--colorfour) !important;
+    
 }
 .varela{
     font-family: "Varela", sans-serif;
@@ -40,7 +45,7 @@ margin-top: 100px;
 }
 
 .bgColorFour {
-    background-color: var(--colorfour) !important;
+    background-color: var(--colorfour);
 }
 
 .ColorOne {
@@ -53,6 +58,10 @@ margin-top: 100px;
 
 .ColorThree {
     color: var(--colorThree);
+}
+
+.ColorFour {
+        color: var(--colorfour) !important;
 }
 
 h1 {
@@ -89,6 +98,10 @@ label {
     color: var(--colorThree);
     font-family: "Expletus Sans", sans-serif;
     font-weight: bold;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    
     
 }
 .btnSubmit:hover{
@@ -97,6 +110,7 @@ label {
     color: var(--colorThree);
 
 }
+
 .fa-chevron-down {
     right: 5px;
     bottom: 10px;
