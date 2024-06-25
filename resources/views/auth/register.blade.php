@@ -35,6 +35,9 @@
                       <div class="mb-3 text-center">
                     <button type="submit" class="btn btn-primary btnSubmit">Registrati</button>
                       </div>
+                      <div class="text-center mt-5">
+                        <p>Sei già registrato ? <a href="{{route('login')}}">Accedi</a></p>
+                     </div>
                   </form>
             </div>
         </div>

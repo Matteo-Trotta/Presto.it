@@ -1,8 +1,8 @@
 <x-layout>
 
-    <x-header title='Dettaglio annuncio' />
+    <x-header2 title='Dettaglio annuncio' />
 
-    <div class="container">
+    <div class="container mt-5">
         <div class=" row justify-content-center">
             <div class="col-6">
 

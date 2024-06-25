@@ -124,7 +124,7 @@
             </div>
             <div class="d-flex align-items-center mb-3">
               <div class="col-3 me-3">
-                <img src="/img/profileMatteo.jpg" class="rounded-circle borderImgProfile" alt="foto profilo">
+                <img src="/img/profileMatteo.jpg" class="img-fluid rounded-circle borderImgProfile" alt="foto profilo">
               </div>
                 <p class="m-0">Matteo</p>
             </div>

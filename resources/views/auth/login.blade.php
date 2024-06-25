@@ -19,6 +19,10 @@
                     <div class="mb-3 text-center">
                     <button type="submit" class="btn btn-primary btnSubmit">Accedi</button>
                     </div>
+                    <div class="text-center mt-5">
+                       <p>Non hai un account ? <a href="{{route('register')}}">Registrati</a></p>
+                    </div>
+                   
                   </form>
             </div>
         </div>

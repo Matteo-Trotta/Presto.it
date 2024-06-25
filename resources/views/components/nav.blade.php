@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bgColorThree ColorTwo fixed-top shadowcard">
     <!-- Container wrapper -->
     <div class="container-fluid">
-        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <a class="navbar-brand mt-2 mt-lg-0" href="">
             <img src="/img/logogiallo2.png" class="" height="50" alt="" loading="lazy" />
         </a>
         
@@ -80,7 +80,7 @@ aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle 
             <a class="nav-link ColorTwo fs-5 fw-semibold " href="{{ route('home') }}">HOME</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link ColorTwo fs-5 fw-semibold" href="{{ route('article.index') }}">Index</a>
+            <a class="nav-link ColorTwo fs-5 fw-semibold" href="{{ route('article.index') }}">Annunci</a>
         </li>
         
         @guest
