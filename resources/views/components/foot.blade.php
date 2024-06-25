@@ -1,7 +1,7 @@
 <!-- Footer -->
-<footer  style="background-image: url('img/cart_home.jpg')" class="text-center text-lg-start text-muted bgHomeImage">
+<footer  style="background-image: url('/img/cart_home.jpg')" class="text-center text-lg-start text-muted bgHomeImage">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom ColorThree">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 borderfooter ColorThree">
       <!-- Left -->
       <div class="me-5 d-none d-lg-block">
         <span>Get connected with us on social networks:</span>
@@ -39,7 +39,7 @@
         <!-- Grid row -->
         <div class="row mt-3 justify-content-between">
           <!-- Grid column -->
-          <div class="col-3 me-auto mb-4 text-center">
+          <div class="col-6 col-lg-3 me-auto mb-4 text-center">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
               <i class="fas fa-gem me-3"></i>Byte-Buster
@@ -91,7 +91,7 @@
               <a href="#!" class="text-reset">Help</a>
             </p>
           </div> --}}
-          <div class="col-3 mx-auto mb-4">
+          <div class="col-3 d-none d-lg-block mx-auto mb-4">
             <!-- Links -->
            
           </div>
@@ -101,32 +101,38 @@
           <!-- Grid column -->
   
           <!-- Grid column -->
-          <div class="col-3 ms-auto mb-md-0 mb-4 ColorThree ">
+          <div class="col-6 col-lg-2 row mb-md-0 mb-4 ColorThree ">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Team</h6>
-            <div class="d-flex align-items-center mb-3">
-              <div class="col-3 me-3 ">
-                <img src="/img/profilePasquale.jpg" class="img-fluid rounded-circle borderImgProfile" alt="foto profilo">
+            <h6 class="text-uppercase fw-bold mb-4 text-center">Team</h6>
+            <div class="d-flex align-items-center mb-3  ">
+              <div class="col-6 mx-auto ">
+                <img src="/img/profilePasquale.jpg" class=" rounded-circle borderImgProfile" alt="foto profilo">
               </div>
-                <p class="m-0">Pakòs</p>
+                <p class="col-6 m-0 me-auto">Pakòs</p>
             </div>
-            <div class="d-flex align-items-center mb-3">
-              <div class="col-3 me-3">
-                <img src="/img/profileVeronica.jpeg" class="img-fluid rounded-circle borderImgProfile" alt="foto profilo">
+            <div class="d-flex align-items-center mb-3 ">
+              <div class="col-6 mx-auto">
+                <img src="/img/profileVeronica.jpeg" class=" rounded-circle borderImgProfile" alt="foto profilo">
               </div>
-                <p class="m-0">Veronica</p>
+                <p class="m-0 col-6 me-auto">Veronica</p>
             </div>
-            <div class="d-flex align-items-center mb-3">
-              <div class="col-3 me-3">
-                <img src="/img/profileGiuliano.jpg" class="img-fluid rounded-circle borderImgProfile" alt="foto profilo">
+            <div class="d-flex align-items-center mb-3 ">
+              <div class="col-6 mx-auto">
+                <img src="/img/profileGiuliano.jpg" class=" rounded-circle borderImgProfile" alt="foto profilo">
               </div>
-                <p class="m-0"> Giuliano</p>
+                <p class="col-6 m-0 me-auto"> Giuliano</p>
             </div>
-            <div class="d-flex align-items-center mb-3">
-              <div class="col-3 me-3">
-                <img src="/img/profileMatteo.jpg" class="img-fluid rounded-circle borderImgProfile" alt="foto profilo">
+            <div class="d-flex align-items-center mb-3 ">
+              <div class="col-6 mx-auto">
+                <img src="/img/profileMatteo.jpg" class=" rounded-circle borderImgProfile" alt="foto profilo">
               </div>
-                <p class="m-0">Matteo</p>
+                <p class="col-6 m-0 me-auto">Matteo</p>
+            </div>
+            <div class="d-flex align-items-center mb-3 ">
+              <div class="col-6 mx-auto">
+                <img src="/img/profile-mirko.jpg" class=" rounded-circle borderImgProfile" alt="foto profilo">
+              </div>
+                <p class="col-6 m-0 me-auto">Mirko</p>
             </div>
           </div>
           <!-- Grid column -->

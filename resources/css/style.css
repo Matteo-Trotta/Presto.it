@@ -129,10 +129,7 @@ label {
     object-fit: cover;
 }
 
-body {
-    background: #000;
-    color: #000;
-}
+
 
 .swiper {
     width: 100%;
@@ -235,3 +232,9 @@ body {
     height: 65px;
 
 }
+.borderfooter{
+
+border-bottom: 3px solid var(--colorThree);
+
+}
+
