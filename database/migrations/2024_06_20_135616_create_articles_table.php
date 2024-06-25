@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->float('price', precision: 2);
+            $table->string('price');
             $table->text('body');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');

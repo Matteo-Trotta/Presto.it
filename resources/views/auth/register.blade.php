@@ -3,7 +3,7 @@
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form class="m-5" method="post" action="{{route('register')}}">
+                <form class="m-5" method="post" action="{{route('register')}}" enctype="multipart/form-data">
                 @csrf
                 
                     <div class="mb-3">
@@ -42,6 +42,13 @@
                       @error('password_confirmation')
                       <span class="text-danger">{{ $message }}</span>
                   @enderror
+
+                  <div class="mt-4">
+                    <label for="profile_photo">Aggiungi foto profilo (opzionale)</label>
+                    <input id="profile_photo" type="file" class="form-control" name="profile_photo">
+            
+                
+                </div>
   
 
                       <div class="mb-3 text-center">

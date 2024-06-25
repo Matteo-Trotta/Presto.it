@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'profile_photo_path',
     ];
 
     /**
@@ -49,4 +50,11 @@ class User extends Authenticatable
     public function articles(){
         return $this->hasMany(Article::class);
     }
+
+    public function getProfilePhotoUrlAttribute()
+{
+    return $this->profile_photo_path
+                ? asset('storage/' . $this->profile_photo_path)
+                : asset('storage/profile-photos/defaultuser.webp');
+}
 }
