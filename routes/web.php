@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 Route::get('/lavoraconnoi', [PublicController::class, 'lavoraconnoi'])->name('lavoraconnoi');
+Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
 
 // ARTICLE CONTROLLER
 

@@ -265,6 +265,12 @@ border-bottom: 3px solid var(--colorThree);
 tr{
     border-bottom: 2px solid var(--colorfour);
 }
+
+.profile-photo {
+    border: solid 2px var(--colorfour);
+}
+
+
 /* .rounded-table {
     border-collapse: separate;
     border-spacing: 0;
