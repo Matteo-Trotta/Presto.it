@@ -130,7 +130,7 @@
                 <div class="dropdown">
                     <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                         id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
-                        <img src="{{ Auth::user()->profile_photo_url }}" class="profile-photo rounded-circle" height="80rem"
+                        <img src="{{ Auth::user()->profile_photo_url }}" class="profile-photo rounded-circle" height="80px" width="80px"
                             alt="Black and White Portrait of a Man" loading="lazy" />
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
@@ -148,6 +148,7 @@
                         @if (Auth::user()->is_revisor)
                             <li>
                                 <a class="dropdown-item" href="{{ route('revisor.index') }}">Pannello revisore</a>
+                                <span>{{\App\Models\Article::count()}}</span>
                             </li>
                         @endif
 
