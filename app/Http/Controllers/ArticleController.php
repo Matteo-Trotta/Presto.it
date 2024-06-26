@@ -9,14 +9,15 @@ use Illuminate\Http\Request;
 class ArticleController extends Controller
 {
     public function category(Category $category){
-        return view('article.category', compact('category'));
+        $articles = $category->articles->where('is_accepted', true);
+        return view('article.category', compact('articles','category'));
     }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $articles = Article::orderBy('created_at', 'desc')->get();
+        $articles = Article::where('is_accepted', true )->orderBy('created_at', 'desc')->paginate(10);
         return view('article.index', compact('articles'));
     }
 

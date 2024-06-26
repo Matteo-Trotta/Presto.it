@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 // PUBLIC CONTROLLER
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
-
+Route::get('/lavoraconnoi', [PublicController::class, 'lavoraconnoi'])->name('lavoraconnoi');
 
 // ARTICLE CONTROLLER
 
@@ -20,7 +20,7 @@ Route::get('/article/{article}', [ArticleController::class, 'show'])->name('arti
 
 // REVISOR CONTROLLER
 
-Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/index',[RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::get('/revisor/list', [RevisorController::class, 'list'])->name('revisor.list');
 Route::get('/revisor/{article}', [RevisorController::class, 'show'])->name('revisor.show');
 
@@ -29,8 +29,7 @@ Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('r
 
 
 // mail
-Route::get('/revisor/index',[RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
-
-Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
-
+Route::get('/revisore/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+

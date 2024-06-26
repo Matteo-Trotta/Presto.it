@@ -15,7 +15,7 @@ class RevisorController extends Controller
     public function becomeRevisor()
     {
         // dd('ciao');
-        Mail::to('matteotrotta7@gmail.com')->send(new BecomeRevisor(Auth::user()));
+        Mail::to('matteotrotta7@aulabpost.it')->send(new BecomeRevisor(Auth::user()));
         return redirect()->route('home')->with('message', 'complimenti, Hai richiesto di diventare revisor');
     }
     public function makeRevisor(User $user)
@@ -46,12 +46,13 @@ class RevisorController extends Controller
     public function accept(Article $article)
     {
         $article->setAccepted(true);
-        return redirect()->back()->with('message', "Hai accettato l'annuncio $article->title");
+        return redirect(route('revisor.list'))->with('message', "Hai accettato l'annuncio $article->title");
     }
 
     public function reject(Article $article)
     {
         $article->setAccepted(false);
-        return redirect()->back()->with('message', "Hai rifiutato l'annuncio $article->title");
+        return redirect(route('revisor.list'))->with('message', "Hai rifiutato l'annuncio $article->title");
     }
+
 }

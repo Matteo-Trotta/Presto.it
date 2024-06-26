@@ -111,6 +111,7 @@
     </a> --}}
 
                 <!-- Notifications -->
+                 @if (Auth::user()->is_revisor)
                 <div class="dropdown">
                     <a data-mdb-dropdown-init class="text-reset me-4 dropdown-toggle hidden-arrow" href="#"
                         id="navbarDropdownMenuLink" role="button" aria-expanded="false">
@@ -121,17 +122,13 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
 
 
-                        @if (Auth::user()->is_revisor)
+                       
+                         
                             <li>
-                                <a class="dropdown-item" href="{{ route('revisor.index') }}">Revisiona annunci!</a>
+                                <a class="dropdown-item" href="{{ route('revisor.list') }}">Dashboard Revisor</a>
 
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('revisor.list') }}">Tutti gli annuci da
-                                    revisionare</a>
-
-                            </li>
-                        @endif
+                     
 
                         {{-- <li>
                             <a class="dropdown-item" href="#">Another news</a>
@@ -140,7 +137,8 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </li> --}}
                     </ul>
-                </div>
+                </div>  
+                 @endif
 
 
 
@@ -165,7 +163,7 @@
 
                         <li>
 
-                            <a href="{{ route('become.revisor') }}" class="dropdown-item">Lavora con noi</a>
+                            <a href="{{ route('lavoraconnoi') }}" class="dropdown-item">Lavora con noi</a>
 
 
 

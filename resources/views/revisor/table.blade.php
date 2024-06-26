@@ -1,9 +1,28 @@
 <x-layout>
-    <x-header2 title="Annunci da revisionare"/>
+    <x-header2 title="Dashboard revisore"/>
+
+   
     <div class="container-fluid">
+@if ($articles_to_check->isEmpty())
+<div class="row justify-content-center align-items-center height-custom text-center">
+    <div class="col-12">
+        <h1 class="fst-italic display-4">
+            Nessun articolo da revisionare
+        </h1>
+        <a href="{{ route('home') }}" class="mt-5 btn btn-success"> Torna all'homepage</a>
+    </div>
+</div>
+
+@else
+
+
         <div class="row justify-content-center mt-5">
             <div class="col-md-10 col-11">
+
+        
+                
                 <table class="table table-striped rounded-table  border shadow">
+                     
                     <thead>
                         <tr >
                             <th class="expletus fw-bold fs-4 text-center " scope="col">Id</th>
@@ -17,6 +36,7 @@
                         </tr>
                     </thead>
                     <tbody class="rounded-table">
+                      
                         @foreach ($articles_to_check as $article)
                         
                             <tr>
@@ -36,6 +56,7 @@
                             </tr>
                         
                         @endforeach
+                       
                         {{-- <tr>
                             <th scope="row">2</th>
                             <td>Jacob</td>
@@ -49,7 +70,14 @@
                         </tr> --}}
                     </tbody>
                 </table>
+            
             </div>
         </div>
+         @endif
     </div>
+
+                
+              
+           
+
 </x-layout>

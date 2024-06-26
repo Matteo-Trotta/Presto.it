@@ -46,7 +46,18 @@
              Team di Web Development
             </p>
             <img class="img-fluid" src="/img/logoblu-trasparente.png" alt="logo presto blu">
+
+            <div class="my-3 text-center ">
+              @auth
+              Vuoi diventare Revisor?
+                  <a class="btn btn-outline " href="{{ route('become.revisor') }}"><span class="me-2 fs-6"><i
+                              class="fa-solid fa-plus"></i></span>Invia richiesta</a>
+              @endauth
           </div>
+    
+          </div>
+
+   
           <!-- Grid column -->
   
           <!-- Grid column -->
@@ -141,11 +152,13 @@
     <!-- Section: Links  -->
   
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center p-4  " style="background-color: rgba(0, 0, 0, 0.05);">
+
+
+
       © 2024 Copyright:
       <a class="text-reset fw-bold" href="https://s2.pictoa.com/media/galleries/300/170/3001706021c5f7c8431/39046876021c5f9b9890.gif">Byte-Busters</a>
     </div>
-
 
 
 
