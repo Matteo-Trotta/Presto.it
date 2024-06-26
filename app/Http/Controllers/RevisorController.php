@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 
 class RevisorController extends Controller
 {
+    public function list(){
+        $articles_to_check = Article::where('is_accepted', null)->get();
+
+        return view('revisor.table', compact('articles_to_check'));
+    }
+    public function show(Article $article)
+    {
+       
+        return view('revisor.show', compact('article'));
+    }
     public function index()
     {
         $article_to_check = Article::where('is_accepted', null)->first();

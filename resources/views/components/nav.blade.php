@@ -105,24 +105,34 @@
     </a> --}}
 
                 <!-- Notifications -->
-                {{-- <div class="dropdown">
-                    <a data-mdb-dropdown-init class="text-reset me-3 dropdown-toggle hidden-arrow" href="#"
+                <div class="dropdown">
+                    <a data-mdb-dropdown-init class="text-reset me-4 dropdown-toggle hidden-arrow" href="#"
                         id="navbarDropdownMenuLink" role="button" aria-expanded="false">
-                        <i class="fas fa-bell"></i>
-                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        <i class="fas fa-bell fs-4"></i>
+                        <span class="badge rounded-pill badge-notification bg-danger">{{\App\Models\Article::count()}}</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        
+                            
+                        @if (Auth::user()->is_revisor)
                         <li>
-                            <a class="dropdown-item" href="#">Some news</a>
+                            <a class="dropdown-item" href="{{ route('revisor.index') }}">Revisiona annunci!</a>
+                            
                         </li>
                         <li>
+                            <a class="dropdown-item" href="{{ route('revisor.list') }}">Tutti gli annuci da revisionare</a>
+                            
+                        </li>
+                    @endif
+                        
+                        {{-- <li>
                             <a class="dropdown-item" href="#">Another news</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#">Something else here</a>
-                        </li>
+                        </li> --}}
                     </ul>
-                </div> --}}
+                </div>
 
 
 
@@ -130,7 +140,7 @@
                 <div class="dropdown">
                     <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                         id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
-                        <img src="{{ Auth::user()->profile_photo_url }}" class="profile-photo rounded-circle" height="80px" width="80px"
+                        <img src="{{ Auth::user()->profile_photo_url }}" class="profile-photo rounded-circle" height="50px" width="50px"
                             alt="Black and White Portrait of a Man" loading="lazy" />
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
@@ -145,12 +155,6 @@
                             <a class="dropdown-item" href="{{ route('article.create') }}">Aggiungi Annuncio</a>
                         </li>
 
-                        @if (Auth::user()->is_revisor)
-                            <li>
-                                <a class="dropdown-item" href="{{ route('revisor.index') }}">Pannello revisore</a>
-                                <span>{{\App\Models\Article::count()}}</span>
-                            </li>
-                        @endif
 
                         <li>
                             <form action="{{ route('logout') }}" method="POST">
