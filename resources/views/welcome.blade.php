@@ -3,13 +3,21 @@
 
 
 
-    <x-header
-     title='Presto.it' />
+    <x-header title='Presto.it' />
     @if (session('message'))
         <div class="alert alert-success mt-2">
             {{ session('message') }}
         </div>
     @endif
+
+    @if (session()->has('errorMessage'))
+        <div class="alert alert danger text-center shadow rounded">
+
+            {{ session('errorMessage') }}
+
+        </div>
+    @endif
+
     <div class="my-3 text-center">
         @auth
             <a class="btn btn-outline" href="{{ route('article.create') }}"><span class="me-2 fs-6"><i
