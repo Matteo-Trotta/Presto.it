@@ -6,10 +6,10 @@
 @if ($articles_to_check->isEmpty())
 <div class="row justify-content-center align-items-center height-custom text-center">
     <div class="col-12">
-        <h1 class="fst-italic display-4">
+        <h1 class="fst-italic display-5 mt-5">
             Nessun articolo da revisionare
         </h1>
-        <a href="{{ route('home') }}" class="mt-5 btn btn-success"> Torna all'homepage</a>
+        <a href="{{ route('home') }}" class="mt-5 btn btnSubmit"> Torna all'homepage</a>
     </div>
 </div>
 
@@ -17,11 +17,11 @@
 
 
         <div class="row justify-content-center mt-5">
-            <div class="col-md-10 col-11">
+            <div class="col-12 col-md-10 ">
 
         
                 
-                <table class="table table-striped rounded-table  border shadow">
+                <table class="table table-striped rounded-table col-12 col-md-10   border shadow">
                      
                     <thead>
                         <tr >

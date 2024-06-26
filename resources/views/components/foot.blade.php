@@ -110,7 +110,7 @@
           <!-- Grid column -->
   
           <!-- Grid column -->
-          <div class="col-6 col-lg-2 row mb-md-0 mb-4 ColorThree ">
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 row mb-md-0 mb-4 ColorThree ">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4 text-center">Team</h6>
             <div class="d-flex align-items-center mb-3  ">

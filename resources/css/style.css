@@ -270,6 +270,13 @@ tr{
     border: solid 2px var(--colorfour);
 }
 
+::placeholder{
+    font-family: "Expletus Sans", sans-serif;
+    color: var(--colorThree) !important;
+    
+}
+
+
 
 /* .rounded-table {
     border-collapse: separate;
