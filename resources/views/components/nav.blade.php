@@ -1,6 +1,4 @@
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bgColorThree ColorTwo fixed-top shadowcard">
-    <!-- Container wrapper -->
     <div class="container-fluid">
         <a class="navbar-brand mt-lg-0" href="">
             <img src="/img/logogiallo2.png" class="" height="50" alt="" loading="lazy" />
@@ -8,12 +6,15 @@
 
         @Auth
             <div class="d-flex align-items-center d-block d-lg-none">
-                <!-- Icon -->
+
+                <!-- Icone -->
+
                 {{-- <a class="text-reset me-3" href="#">
                     <i class="fas fa-shopping-cart"></i>
                 </a> --}}
 
-                <!-- Notifications -->
+                <!-- Notifiche -->
+
                 {{-- <div class="dropdown">
                     <a data-mdb-dropdown-init class="text-reset me-3 dropdown-toggle hidden-arrow" href="#"
                         id="navbarDropdownMenuLink" role="button" aria-expanded="false">
@@ -32,6 +33,8 @@
                         </li>
                     </ul>
                 </div> --}}
+
+
                 <!-- Avatar -->
                 <div class="dropdown">
                     <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
@@ -65,17 +68,15 @@
             </div>
         @endauth
 
-        <!-- Toggle button -->
-        <button data-mdb-collapse-init class="navbar-toggler shadow-none" type="button" data-mdb-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Panino -->
+        <button data-mdb-collapse-init class="navbar-toggler shadow-none" type="button"
+            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
             <i class="fas fa-bars fs-1 ColorFour"></i>
         </button>
 
-        <!-- Collapsible wrapper -->
+        <!-- Contenuto panino -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Navbar brand -->
-
-            <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item ">
                     <a class="nav-link ColorTwo fs-5 fw-semibold " href="{{ route('home') }}">HOME</a>
@@ -84,30 +85,19 @@
                     <a class="nav-link ColorTwo fs-5 fw-semibold" href="{{ route('article.index') }}">Annunci</a>
                 </li>
 
+
                 @guest
-
-
-
-
-
-
-
-
                     <li class="nav-item">
                         <a class="nav-link ColorTwo fs-5 fw-semibold " href="{{ route('register') }}">Registrati</a>
                     </li>
-
-
                     <li class="nav-item">
                         <a class="nav-link ColorTwo fs-5 fw-semibold " href="{{ route('login') }}">Accedi</a>
                     </li>
-                @else
-                </ul>
-                <!-- Left links -->
-            </div>
-            <!-- Collapsible wrapper -->
+                @endguest
+            </ul>
 
-            <!-- Right elements -->
+        </div>
+        @Auth
             <div class="d-flex align-items-center d-none d-lg-flex">
                 <!-- Icon -->
                 {{-- <a class="text-reset me-3" href="#">
@@ -133,6 +123,9 @@
                         </li>
                     </ul>
                 </div> --}}
+
+
+
                 <!-- Avatar -->
                 <div class="dropdown">
                     <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
@@ -152,30 +145,23 @@
                             <a class="dropdown-item" href="{{ route('article.create') }}">Aggiungi Annuncio</a>
                         </li>
 
-                       
                         @if (Auth::user()->is_revisor)
+                            <li>
+                                <a class="dropdown-item" href="{{ route('revisor.index') }}">Pannello revisore</a>
+                            </li>
+                        @endif
 
                         <li>
-                            <a class="dropdown-item" href="{{ route('revisor.index') }}">Pannello revisore</a>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button class="dropdown-item text-danger" type="submit">Logout</button>
+                            </form>
+
                         </li>
-                        @endif
-                      
+                    </ul>
+                </div>
 
-
-
-
-
-                            <li>
-                                <form action="{{ route('logout') }}" method="POST">
-                                    @csrf
-                                    <button class="dropdown-item text-danger" type="submit">Logout</button>
-                                </form>
-
-                            </li>
-                        </ul>
-                    </div>
-                @endguest
             </div>
-
-        </div>
-    </nav>
+        @endauth
+    </div>
+</nav>

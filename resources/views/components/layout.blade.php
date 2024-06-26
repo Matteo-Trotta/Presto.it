@@ -26,21 +26,16 @@
 
     <x-nav />
 
-
     <div class="min-vh-100 bgColorTwo">
         {{ $slot }}
     </div>
 
-
     <x-foot />
-
-
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
 
-
-
+    {{-- SWIPER --}}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     

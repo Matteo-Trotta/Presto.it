@@ -1,4 +1,5 @@
 <x-layout>
+    
     <x-header2  title="Annunci in: {{$category->name}}"/>
 
     <div class="container mt-5">
@@ -10,4 +11,5 @@
     @endforeach
 </div>
 </div>
+
 </x-layout>

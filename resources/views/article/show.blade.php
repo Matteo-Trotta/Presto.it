@@ -5,7 +5,6 @@
     <div class="container mt-5">
         <div class=" row justify-content-center">
             <div class="col-6">
-
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -76,21 +75,15 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="col-6">
-
                 <h2>{{ $article->title }}</h2>
                 <h2>{{ $article->price }}</h2>
                 <p>{{ $article->category->name }}</p>
                 <p>{{ $article->body }}</p>
-
             </div>
-
         </div>
     </div>
-
-
 
 </x-layout>

@@ -9,7 +9,6 @@
                     <x-card :article="$article" />
                 </div>
             @endforeach
-
         </div>
     </div>
 
