@@ -17,13 +17,13 @@ Route::get('/profile', [PublicController::class, 'profile'])->name('profile');
 
 
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
-Route::get('/article/index',[ArticleController::class, 'index'])->name ('article.index');
-Route::get('/article/category/{category}',[ArticleController::class, 'category'])->name ('article.category');
+Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/article/category/{category}', [ArticleController::class, 'category'])->name('article.category');
 Route::get('/article/{article}', [ArticleController::class, 'show'])->name('article.show');
 
 // REVISOR CONTROLLER
 
-Route::get('/revisor/index',[RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::get('/revisor/list', [RevisorController::class, 'list'])->name('revisor.list');
 Route::get('/revisor/{article}', [RevisorController::class, 'show'])->name('revisor.show');
 
@@ -42,7 +42,7 @@ Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->n
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
-   
 });
 
-
+// cambio lingua
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');

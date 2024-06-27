@@ -24,10 +24,18 @@ class PublicController extends Controller
     {
         $query = $request->input('query');
         $articles = Article::search($query)->where('is_accepted', true)->paginate(10);
-        return view('article.searched', ['articles'=>$articles, 'query'=>$query]); }
+        return view('article.searched', ['articles' => $articles, 'query' => $query]);
+    }
 
-        public function profile(){
+    public function profile()
+    {
 
-            return view('profile.profile');
-        }
+        return view('profile.profile');
+    }
+
+    public function setLanguage($lang)
+    {
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }
