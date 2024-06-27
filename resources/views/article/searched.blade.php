@@ -1,13 +1,13 @@
 <x-layout>
     <x-header2
-    title="Risultati della ricerca {{ $query }} " 
+    title="Risultati della ricerca '{{ $query }}' " 
     
     />
     <div class="container-fluid ">
        
         <div class="row height-custom justify-content-center align-items-center py-5">
             @forelse ($articles as $article)
-                <div class="col-12 col-md-3 ">
+                <div class="col-12 col-md-8 ">
                     <x-card :article="$article" />
                 </div>
             @empty

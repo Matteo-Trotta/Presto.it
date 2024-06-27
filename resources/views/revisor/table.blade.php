@@ -17,11 +17,11 @@
 
 
         <div class="row justify-content-center mt-5">
-            <div class="col-12 col-md-10 ">
+            <div class="col-10 overflow-auto">
 
         
                 
-                <table class="table table-striped rounded-table col-12 col-md-10   border shadow">
+                <table class="table table-striped d-block d-md-table rounded-table col-12 col-md-10   border shadow ">
                      
                     <thead>
                         <tr >

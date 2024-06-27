@@ -31,7 +31,7 @@ class CreateArticle extends Component
         ]);
 
         
-        session()->flash('message', 'Annuncio pubblicato');
+        session()->flash('message', 'Il tuo annuncio è in attesa di revisione');
         return redirect(route('home'));
         
     }

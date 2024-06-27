@@ -262,7 +262,7 @@
 
             </div>
         @endauth
-        <div class="col-4"></div>
+        <div class="col-4 col-lg-3 col-xl-4"></div>
     </div>
     </div>
 

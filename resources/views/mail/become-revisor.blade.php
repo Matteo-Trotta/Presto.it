@@ -12,14 +12,14 @@
 
 
     <div>
-        <h1>
+        <h1 class="expletus">
             Un utente ha chiesto di lavorare con noi
         </h1>
         <h2>
             Ecco i suoi dati:
         </h2>
-        <p>Email {{ $user->name }}</p>
-        <p>Nome: {{ $user->email }}</p>
+        <p>Nome: {{ $user->name }}</p>
+        <p>Email: {{ $user->email }}</p>
         <p>Se vuoi renderlo revisore clicca sul link sotto</p>
         <a href="{{ route('make.revisor', compact('user')) }}">Rendi revisore</a>
 
