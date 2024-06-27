@@ -1,7 +1,7 @@
 <x-layout>
 
     <x-header2 
-    title='Aggiungi annuncio'
+    title="{{ __('ui.addAd') }}"
     />
 <livewire:create-article />
 

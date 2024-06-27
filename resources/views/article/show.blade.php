@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-header2 title='Dettaglio annuncio' />
+    <x-header2 title="{{ __('ui.detailAds') }}" />
 
     <div class="container mt-5">
         <div class=" row justify-content-center">
