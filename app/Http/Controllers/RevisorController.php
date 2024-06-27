@@ -29,8 +29,8 @@ class RevisorController extends Controller
     public function list()
     {
         $articles_to_check = Article::where('is_accepted', null)->get();
-
-        return view('revisor.table', compact('articles_to_check'));
+        $latest_article = Article::whereNotNull('is_accepted')->latest()->first();
+        return view('revisor.table', compact('articles_to_check','latest_article'));
     }
     public function show(Article $article)
     {
@@ -40,6 +40,7 @@ class RevisorController extends Controller
     public function index()
     {
         $article_to_check = Article::where('is_accepted', null)->first();
+        
         return view('revisor.index', compact('article_to_check'));
     }
 
@@ -55,4 +56,9 @@ class RevisorController extends Controller
         return redirect(route('revisor.list'))->with('message', "Hai rifiutato l'annuncio $article->title");
     }
 
+    public function undo(Article $article)
+{
+    $article->undoLastAction();
+    return redirect(route('revisor.list'))->with('message', "Hai annullato l'ultima operazione sull'annuncio $article->title");
+}
 }

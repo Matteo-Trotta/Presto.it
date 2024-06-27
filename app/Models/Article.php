@@ -28,6 +28,18 @@ class Article extends Model
 
     public function setAccepted($value){
         $this->is_accepted = $value;
+        $this->last_action = $value ? 'accepted' : 'rejected';
+        $this->save();
+        return true;
+    }
+
+    public function undoLastAction(){
+        if ($this->last_action === 'accepted') {
+            $this->is_accepted = null;
+        } elseif ($this->last_action === 'rejected') {
+            $this->is_accepted = null;
+        }
+        $this->last_action = null;
         $this->save();
         return true;
     }

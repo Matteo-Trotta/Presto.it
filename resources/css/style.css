@@ -111,6 +111,28 @@ label {
 
 }
 
+.btnSubmit2{
+    background-color: var(--colorfour);
+    border: 1px solid var(--colorThree);
+    color: var(--colorThree);
+    font-family: "Expletus Sans", sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    
+    
+}
+.btnSubmit2:hover{
+   
+    color: var(--colorThree);
+    box-shadow:none !important;
+   
+
+}
+
+
+
 .fa-chevron-down {
     right: 5px;
     bottom: 10px;

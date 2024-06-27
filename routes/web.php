@@ -29,6 +29,7 @@ Route::get('/revisor/{article}', [RevisorController::class, 'show'])->name('revi
 
 Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
+Route::patch('/undo/{article}', [RevisorController::class, 'undo'])->name('undo');
 
 
 // mail
