@@ -20,3 +20,36 @@ window.addEventListener('scroll', ()=>{
         navbar.classList.remove('scrolled')
     }
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollableDiv = document.getElementById('scrollable-div');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    scrollableDiv.addEventListener('mousedown', (e) => {
+        isDown = true;
+        scrollableDiv.classList.add('active');
+        startX = e.pageX - scrollableDiv.offsetLeft;
+        scrollLeft = scrollableDiv.scrollLeft;
+    });
+
+    scrollableDiv.addEventListener('mouseleave', () => {
+        isDown = false;
+        scrollableDiv.classList.remove('active');
+    });
+
+    scrollableDiv.addEventListener('mouseup', () => {
+        isDown = false;
+        scrollableDiv.classList.remove('active');
+    });
+
+    scrollableDiv.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - scrollableDiv.offsetLeft;
+        const walk = (x - startX) * 3; // La velocità di scorrimento
+        scrollableDiv.scrollLeft = scrollLeft - walk;
+    });
+});
+

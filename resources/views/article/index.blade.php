@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-header2 title='Tutti gli Annunci'/>
+    <x-header title='Tutti gli Annunci'/>
 
     <div class="my-3 text-center">
         @auth
@@ -12,7 +12,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
             @foreach ($articles as $article)
-                <div class="col-8 ">
+                <div class="col-7 ">
                     <x-card :article="$article" />
                 </div>
             @endforeach

@@ -321,5 +321,34 @@ tr{
   } */
 
   .colHeight{
-    height: 7vh;
+    height: 8vh;
   }
+
+
+  /* Per Webkit (Chrome, Safari) */
+.custom-scrollbar {
+    -webkit-overflow-scrolling: touch; /* Abilita lo scorrimento dolce su dispositivi touch */
+    overflow: scroll;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    display: none; /* Nasconde la barra di scorrimento su Webkit (Chrome, Safari) */
+}
+
+/* Per Firefox */
+.custom-scrollbar {
+    scrollbar-width: none; /* Nasconde la barra di scorrimento su Firefox */
+}
+
+/* Per Internet Explorer e Edge */
+.custom-scrollbar {
+    -ms-overflow-style: none; /* Nasconde la barra di scorrimento su Internet Explorer e Edge */
+}
+
+/* Classe per lo stato attivo del div scorrevole */
+.custom-scrollbar.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+  
