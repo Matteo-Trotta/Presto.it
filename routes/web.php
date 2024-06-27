@@ -1,15 +1,17 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\PublicController;
-use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RevisorController;
 
 // PUBLIC CONTROLLER
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 Route::get('/lavoraconnoi', [PublicController::class, 'lavoraconnoi'])->name('lavoraconnoi');
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
+Route::get('/profile', [PublicController::class, 'profile'])->name('profile');
 
 // ARTICLE CONTROLLER
 
@@ -32,5 +34,14 @@ Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('r
 // mail
 Route::get('/revisore/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+
+// Profile Controller
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+   
+});
 
 
