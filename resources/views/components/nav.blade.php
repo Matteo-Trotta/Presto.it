@@ -234,7 +234,7 @@
                             <p class="">Ciao, {{ Auth::user()->name }}</p>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="">My Profile</a>
+                            <a class="dropdown-item" href="{{ route('profile') }}">My Profile</a>
                         </li>
 
                         <li>
