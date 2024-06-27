@@ -32,7 +32,7 @@ title="Modifica profilo"
                         </div>
 
                         <div class="form-group">
-                            <label for="email">{{ __('Email') }}</label>
+                            <label for="email">Email</label>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email', auth()->user()->email) }}" required>
 
                             @error('email')
@@ -43,7 +43,7 @@ title="Modifica profilo"
                         </div>
 
                         <div class="form-group">
-                            <label for="profile_photo">{{ __('Profile Photo') }}</label>
+                            <label for="profile_photo">Foto profilo</label>
                             <input id="profile_photo" type="file" class="form-control @error('profile_photo') is-invalid @enderror" name="profile_photo">
 
                             @error('profile_photo')
