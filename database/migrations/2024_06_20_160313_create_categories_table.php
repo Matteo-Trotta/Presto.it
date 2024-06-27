@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
         });
         $categories = [
-            'Abbigliamento', 'Accessori', 'Arredamento', 'Auto e Moto', 'Bambini', 'Casa e Giardino', 'Collezionismo', 'Elettronica', 'Film e Musica', 'Fotografia', 'Giochi e Videogiochi', 'Hobby e Tempo Libero', 'Libri e Riviste', 'Nautica', 'Sport e Fitness', 'Strumenti Musicali', 'Telefonia', 'Ufficio e Industria', 'Viaggi e Vacanze', 'Altro'
+            'Abbigliamento', 'Accessori', 'Arredamento', 'Motori', 'Bambini', 'Casa', 'Collezionismo', 'Elettronica', 'Film','Musica', 'Fotografia', 'Videogiochi', 'Hobby', 'Libri', 'Riviste', 'Nautica', 'Sport', 'Telefonia', 'Ufficio', 'Viaggi', 'Altro'
         ];
         foreach ($categories as $category) {
             Category::create([

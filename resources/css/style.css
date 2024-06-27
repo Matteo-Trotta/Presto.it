@@ -319,3 +319,7 @@ tr{
   .rounded-table tbody tr:last-child td:last-child {
     border-left: none;
   } */
+
+  .colHeight{
+    height: 7vh;
+  }

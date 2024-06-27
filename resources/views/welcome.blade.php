@@ -18,6 +18,7 @@
         </div>
     @endif
 
+
     <div class="my-3 text-center">
         @auth
             <a class="btn btn-outline" href="{{ route('article.create') }}"><span class="me-2 fs-6"><i
