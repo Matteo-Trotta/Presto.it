@@ -96,10 +96,27 @@
                 </form>
             </div>
 
+            
+
             <div class="d-flex align-items-center d-none d-lg-flex col-4 justify-content-end">
-                <x-_locale lang="it" />
-                <x-_locale lang="en" />
-                <x-_locale lang="es" />
+                <div class="dropdown me-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-earth-europe fa-xl"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" ><x-_locale lang="it" /></a></li>
+                      <li><a class="dropdown-item" ><x-_locale lang="en" /></a></li>
+                      <li><a class="dropdown-item" > <x-_locale lang="es" /></a></li>
+                      <li><a class="dropdown-item" >  <x-_locale lang="fr" /></a></li>
+                      <li><a class="dropdown-item" >  <x-_locale lang="de" /></a></li>
+                      <li><a class="dropdown-item" >  <x-_locale lang="nl" /></a></li>
+
+                    </ul>
+                  </div>
+                
+                
+               
+               
                 @auth
                     @if (Auth::user()->is_revisor)
                         <div class="dropdown">
