@@ -33,7 +33,7 @@ return [
     'reject' => 'Rifiuta',
     'accept' => 'Accetta',
     'author' => 'Autore',
-    
+    'presto' => 'Presto.it',
     'title' => 'Titolo',
     'price' => 'Prezzo',
     'category' => 'Categoria',

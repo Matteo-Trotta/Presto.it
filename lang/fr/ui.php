@@ -1,5 +1,6 @@
 <?php
 return [
+    'presto' => 'Presto.it',
     'latestArticles' => 'Nos dernières annonces',
     'ads' => 'Annonces',
     'signUp' => 'Inscription',

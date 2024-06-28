@@ -36,7 +36,7 @@ return [
     'backToHomepage' => 'Back to Homepage',
     'cancelReview' => 'Cancel Review',
     'dashboardTitle' => 'Revisor Dashboard',
-    
+    'presto' => 'Presto.it',
     'editProfile' => 'Edit Profile',
 
     'reject' => 'Reject',

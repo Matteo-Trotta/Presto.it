@@ -29,7 +29,7 @@ return [
     'dashboardTitle' => 'Panel del Revisor',
     'noArticlesToReview' => 'No hay artículos para revisar',
     'editProfile' => 'Editar Perfil',
-
+    'presto' => 'Presto.it',
    
     'reject' => 'Rechazar',
     'accept' => 'Aceptar',

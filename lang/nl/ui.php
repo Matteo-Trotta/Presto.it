@@ -53,7 +53,7 @@ return [
     'selectFile'=>'Selecteer afbeelding',
     'editProfile' => 'Profiel Bewerken',
 
-
+    'presto' => 'Presto.it',
 
     // Categorieën
     'Abbigliamento' => 'Kleding',

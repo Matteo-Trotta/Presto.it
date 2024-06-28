@@ -1,5 +1,5 @@
 <x-layout>
-    <x-header title='Presto.it' />
+    <x-header title="{{ __('ui.presto') }}" />
 
     @if (session('message'))
         <div class="alert alert-success mt-2">
