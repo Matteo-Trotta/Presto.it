@@ -131,6 +131,28 @@ label {
 
 }
 
+.btnSubmit3{
+    background-color:  rgb(241, 70, 70);
+    border: 1px solid rgb(175, 2, 2);
+    color: rgb(89, 1, 1);
+    font-family: "Expletus Sans", sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-top: 10px;
+    
+    
+}
+.btnSubmit3:hover{
+   
+    background-color:red;
+    box-shadow:none !important;
+   
+
+}
+
+
+
 
 
 .fa-chevron-down {
