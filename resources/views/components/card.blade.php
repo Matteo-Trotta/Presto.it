@@ -10,7 +10,7 @@
                 <h5 class="card-title fs-3 expletus">{{ $article->title }}</h5>
                 
                 <h5 class="card-title fs-4"><a class=" anchorCard ColorTwo text-decoration-none"
-                        href="{{ route('article.category', $article->category) }}">{{ $article->category->name }}</a>
+                        href="{{ route('article.category', $article->category) }}">{{ __('ui.'.$article->category->name) }}</a>
                 </h5>
                 <h5 class="card-title fs-4 text-warning">{{ $article->price }} €</h5>
                 <p class="card-text fs-4">{{ $article->body }}</p>
