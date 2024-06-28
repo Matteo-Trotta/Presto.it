@@ -33,31 +33,31 @@ margin-top: 100px;
 }
 
 .bgColorOne {
-    background-color: var(--colorOne);
+    background-color: var(--colorOne) !important;
 }
 
 .bgColorTwo {
-    background-color: var(--colorTwo);
+    background-color: var(--colorTwo) !important;
 }
 
 .bgColorThree {
-    background-color: var(--colorThree);
+    background-color: var(--colorThree) !important;
 }
 
 .bgColorFour {
-    background-color: var(--colorfour);
+    background-color: var(--colorfour) !important;
 }
 
 .ColorOne {
-    color: var(--colorOne);
+    color: var(--colorOne) !important;
 }
 
 .ColorTwo {
-    color: var(--colorTwo);
+    color: var(--colorTwo) !important;
 }
 
 .ColorThree {
-    color: var(--colorThree);
+    color: var(--colorThree) !important;
 }
 
 .ColorFour {
@@ -383,7 +383,8 @@ tr{
     width: 120px;
     height: 120px;
 }
-
+.shadowImgCarousel{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.6);}
 
 
 
