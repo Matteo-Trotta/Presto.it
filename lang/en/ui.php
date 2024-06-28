@@ -37,7 +37,8 @@ return [
     'cancelReview' => 'Cancel Review',
     'dashboardTitle' => 'Revisor Dashboard',
     
-    
+    'editProfile' => 'Edit Profile',
+
     'reject' => 'Reject',
     'accept' => 'Accept',
     'author' => 'Author',

@@ -39,6 +39,8 @@ return [
     'description' => 'Description',
     'publishAd' => 'Publier l\'annonce',
     'requestText' => 'Texte de votre demande',
+    'editProfile' => 'Modifier Profil',
+
 
     'backToHomepage' => 'Retour à l\'accueil',
     'cancelReview' => 'Annuler la révision',

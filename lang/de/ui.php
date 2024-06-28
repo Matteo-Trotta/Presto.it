@@ -51,6 +51,8 @@ return [
     'on' => 'am',
     'selectImg'=>'Bild auswählen',
     'selectFile'=>'Bild auswählen',
+    'editProfile' => 'Profil Bearbeiten',
+
 
     
     // Kategorien

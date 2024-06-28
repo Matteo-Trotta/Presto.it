@@ -406,7 +406,17 @@ tr{
     height: 120px;
 }
 .shadowImgCarousel{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.6);}
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+.h{
+    height: 300px;
+   
+}
+
+.napoli{
+    background-image: url('/public/img/napoli.jpg');
+}
 
 
 

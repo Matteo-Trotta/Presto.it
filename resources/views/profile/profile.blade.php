@@ -1,20 +1,22 @@
 <x-layout>
 
     <x-header2
-    title="Profilo"
+    title="{{ __('ui.myProfile') }}"
     />
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-3">
-            <img src="{{ Auth::user()->profile_photo_url }}" alt="" class="rounded-circle border shadow my-5" >
+<div class="container my-5">
+    <div class="row justify-content-center" >
+        <div class="col-5 d-flex justify-content-center bgColorThree rounded">
+            <img src="{{ Auth::user()->profile_photo_url }}" alt="" class="rounded-circle border shadow my-5 img-fluid h" >
         </div>
-        <div class="col-3 text-center my-5">
+        <div class="col-5 text-center d-flex flex-column justify-content-center  my-5 ">
+            <label >{{ __('ui.name') }}</label>
             <h1 >{{ Auth::user()->name }}</h1>
-            <h2>{{ Auth::user()->email }}</h2>
-
+            <label>{{ __('ui.emailAddress') }}</label>
+            <h2 >{{ Auth::user()->email }}</h2>
+            <div> <a href="{{ route('profile.edit') }}" class="btn btnSubmit">{{ __('ui.editProfile') }}</a></div>
         </div>
 
-        <div> <a href="{{ route('profile.edit') }}" class="btn btnSubmit">Modifica Profilo</a></div>
+       
     </div>
 </div>
 

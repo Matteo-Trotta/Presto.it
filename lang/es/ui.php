@@ -28,6 +28,8 @@ return [
     'detailAds' => 'Detalles del anuncio', 
     'dashboardTitle' => 'Panel del Revisor',
     'noArticlesToReview' => 'No hay artículos para revisar',
+    'editProfile' => 'Editar Perfil',
+
    
     'reject' => 'Rechazar',
     'accept' => 'Aceptar',

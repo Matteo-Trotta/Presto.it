@@ -51,6 +51,8 @@ return [
     'on' => 'op',
     'selectImg'=>'Selecteer afbeelding',
     'selectFile'=>'Selecteer afbeelding',
+    'editProfile' => 'Profiel Bewerken',
+
 
 
     // Categorieën

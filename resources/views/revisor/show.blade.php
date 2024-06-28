@@ -68,12 +68,12 @@
                         <form action="{{ route('reject', ['article' => $article]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btnSubmit3 me-3 fw-bold ">{{ __('reject') }}</button>
+                            <button class="btn btnSubmit3 me-3 fw-bold ">{{ __('ui.reject') }}</button>
                         </form>
                         <form action="{{ route('accept', ['article' => $article]) }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btnSubmit  fw-bold ">{{ __('accept') }}</button>
+                            <button class="btn btnSubmit  fw-bold ">{{ __('ui.accept') }}</button>
                         </form>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                     <h1 class="fst-italic display-4">
                         {{ __('noArticlesToReview') }}
                     </h1>
-                    <a href="{{ route('home') }}" class="mt-5 btn btn-success">{{ __('backToHomepage') }}</a>
+                    <a href="{{ route('home') }}" class="mt-5 btn btn-success">{{ __('ui.backToHomepage') }}</a>
                 </div>
             </div>
         @endif

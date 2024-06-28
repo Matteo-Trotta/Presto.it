@@ -44,6 +44,7 @@ return [
     'noArticlesToReview' => 'Nessun articolo da revisionare',
     'backToHomepage' => 'Torna all\'homepage',
     'cancelReview' => 'Annulla la revisione',
+    'editProfile' => 'Modifica Profilo' ,
   
     'user' => 'Utente',
     'date' => 'Data',
