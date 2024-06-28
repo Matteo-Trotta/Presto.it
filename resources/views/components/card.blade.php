@@ -2,7 +2,7 @@
     <div class="row justify-content-center g-0">
         <div class=" d-flex justify-content-center col-12 col-lg-4 p-3">
             <a href="{{ route('article.show', compact('article')) }}"> <img
-                    class=" img-fluid border rounded  borderimg shadowimg  " src="{{$article->images->isNotEmpty()?Storage::url($article->images->first()->path) : 'https://picsum.photos/200'}}" alt="Immagine dell'articolo {{$article->title}}">
+                    class=" img-fluid border rounded  borderimg shadowimg  " src="{{$article->images->isNotEmpty()?$article->images->first()->getUrl(1000,600):''}}" alt="Immagine dell'articolo {{$article->title}}">
             </a>
         </div>
         <div class="col-md-7  text-center d-flex align-items-center p-3 pb-0 ">

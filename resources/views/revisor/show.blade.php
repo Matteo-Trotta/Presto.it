@@ -14,10 +14,9 @@
                 <div class="col-md-8">
                     <div class="row justify-content-center">
                         @for ($i = 0; $i < 1; $i++)
-                            <div class="col-6 col-md-4 mb-4 text-center">
-                                <img src="https://picsum.photos/300" class="img-fluid rounded shadow "
-                                    alt="immagine segnaposto">
-                            </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="{{ $article->images }}" class="d-block w-100" alt="...">
+                          </div>
                         @endfor
                     </div>
                 </div>

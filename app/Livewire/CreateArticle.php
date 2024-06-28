@@ -4,9 +4,11 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use App\Jobs\ResizeImage;
+use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
-use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\File;
 
 class CreateArticle extends Component
 {
@@ -20,59 +22,62 @@ class CreateArticle extends Component
     public $body;
     #[Validate('required', message: 'La Categoria è richiesta')]
     public $category;
-    
+
     public $images = [];
 
     public $temporary_images;
 
-    protected function cleanForm(){
+    protected function cleanForm()
+    {
         $this->title = '';
         $this->price = '';
         $this->body = '';
         $this->category = '';
         $this->images = [];
-
-
-
     }
 
-    public function createArticle(){
+    public function createArticle()
+    {
 
         $this->validate();
         $this->article = Article::create([
-            'title'=> $this->title,
+            'title' => $this->title,
             'price' => $this->price,
             'body' => $this->body,
             'category_id' => $this->category,
             'user_id' => Auth::id()
 
         ]);
-        if(count($this->images)>0) {
+                                                 // CROP FOTO 
+        if (count($this->images) > 0) {
             foreach ($this->images as $image) {
-                $this->article->images()->create(['path'=>$image->store('images', 'public')]);
+                $newFileName = "articles/{$this->article->id}";
+                $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
+                dispatch(new ResizeImage($newImage->path, 1000, 600));
             }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
-        
         session()->flash('message', 'Il tuo annuncio è in attesa di revisione');
         $this->cleanForm();
         return redirect(route('home'));
-        
     }
-    public function updatedTemporaryImages(){
+    public function updatedTemporaryImages()
+    {
         if ($this->validate([
             'temporary_images.*' => 'image|max:1024',
             'temporary_images' => 'max:6'
-        ])){
+        ])) {
 
-        
-        foreach ($this->temporary_images as $image) {
-            $this->images[]=$image;
+
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
+            }
         }
     }
-    }
-    public function removeImage($key){
-        if(in_array($key, array_keys($this->images))){
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))) {
             unset($this->images[$key]);
         }
     }
