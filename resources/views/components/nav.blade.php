@@ -62,8 +62,11 @@
                     <img src="/img/logogiallo2.png" class="d-none d-lg-block" height="50" alt="" loading="lazy" />
                 </a>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="text-center nav-link ColorTwo fs-5 fw-semibold" href="{{ route('home') }}">{{ __('ui.home') }}</a>
+                    </li> --}}
+                    <li class="nav-item d-flex align-items-center">
+                       <a href="{{ route('home') }}"> <i class="fa-solid fa-house ColorFour fs-3"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="text-center nav-link ColorTwo fs-5 fw-semibold" href="{{ route('article.index') }}">{{ __('ui.ads') }}</a>
@@ -87,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="col-4 d-flex align-items-center justify-content-center d-none d-lg-flex">
+            <div class="col-4 d-flex align-items-center justify-content-center d-none d-lg-flex mx-auto">
                 <form action="{{ route('article.search') }}" method="GET" role="search">
                     <div class="position-relative input-group rounded d-flex align-items-center">
                         <input name="query" type="search" class="form-control m-0 border-0 rounded" placeholder="{{ __('ui.searchPlaceholder') }}" aria-label="Search" />
@@ -100,16 +103,17 @@
 
             <div class="d-flex align-items-center d-none d-lg-flex col-4 justify-content-end">
                 <div class="dropdown me-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn bgColorFour ColorThree dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-earth-europe fa-xl"></i>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu menuFlag dropdown-menu-end shadowcard">
+                        
                       <li><a class="dropdown-item" ><x-_locale lang="it" /></a></li>
                       <li><a class="dropdown-item" ><x-_locale lang="en" /></a></li>
-                      <li><a class="dropdown-item" > <x-_locale lang="es" /></a></li>
-                      <li><a class="dropdown-item" >  <x-_locale lang="fr" /></a></li>
-                      <li><a class="dropdown-item" >  <x-_locale lang="de" /></a></li>
-                      <li><a class="dropdown-item" >  <x-_locale lang="nl" /></a></li>
+                      <li><a class="dropdown-item" ><x-_locale lang="es" /></a></li>
+                      <li><a class="dropdown-item" ><x-_locale lang="fr" /></a></li>
+                      <li><a class="dropdown-item" ><x-_locale lang="de" /></a></li>
+                      <li><a class="dropdown-item" ><x-_locale lang="nl" /></a></li>
 
                     </ul>
                   </div>
