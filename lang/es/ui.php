@@ -47,6 +47,10 @@ return [
     'user' => 'Usuario',
     'date' => 'Fecha',
     'review' => 'Revisar',
+    'publishedby' => 'Publicado por',
+    'on' => 'el',
+    'selectImg'=>'Seleccionar imagen',
+    'selectFile'=>'Seleccionar imagen',
 
     // Categorías
     'Abbigliamento' => 'Ropa',

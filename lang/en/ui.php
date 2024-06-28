@@ -45,6 +45,10 @@ return [
     'user' => 'User',
     'date' => 'Date',
     'review' => 'Review',
+    'publishedby' => 'Published by',
+    'on' => 'on',
+    'selectImg'=>'Select image',
+    'selectFile'=>'Select file',
     
     // Categories
     'Abbigliamento' => 'Clothing',

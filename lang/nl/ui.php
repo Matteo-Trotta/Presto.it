@@ -47,6 +47,12 @@ return [
     'date' => 'Datum',
     'review' => 'Beoordeling',
 
+    'publishedby' => 'Gepubliceerd door',
+    'on' => 'op',
+    'selectImg'=>'Selecteer afbeelding',
+    'selectFile'=>'Selecteer afbeelding',
+
+
     // Categorieën
     'Abbigliamento' => 'Kleding',
     'Accessori' => 'Accessoires',

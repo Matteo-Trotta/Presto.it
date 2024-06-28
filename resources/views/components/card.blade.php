@@ -15,7 +15,7 @@
                 <h5 class="card-title fs-4 text-warning">{{ $article->price }} €</h5>
                 <p class="card-text fs-4">{{ $article->body }}</p>
                
-                <p class="d-flex justify-content-end align-items-center m-0">Caricato da: {{ $article->user->name }}, {{ $article->created_at->format('d M Y') }}</p>
+                <p class="d-flex justify-content-end align-items-center m-0">{{ __('ui.publishedby')}}: {{ $article->user->name }}, {{ $article->created_at->format('d M Y') }}</p>
             </div>
         </div>
     </div>

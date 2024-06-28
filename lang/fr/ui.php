@@ -47,6 +47,13 @@ return [
     'date' => 'Date',
     'review' => 'Réviser',
 
+    'publishedby' => 'Publié par',
+    'on' => 'le',
+    'selectImg'=>'Sélectionner une image',
+    'selectFile'=>'Sélectionner une image',
+
+    
+
     // Catégories
     'Abbigliamento' => 'Vêtements',
     'Accessori' => 'Accessoires',

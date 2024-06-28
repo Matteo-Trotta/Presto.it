@@ -70,9 +70,13 @@
                 <h2 class="expletus">{{ $article->title }}</h2>
                 <h2 class="raleway ColorFour fs-4">{{ $article->price }} €</h2>
                 
-                <p class="raleway "><a class="ColorTwo" href="{{route('article.category', $article->category)}}">{{ $article->category->name }}</a></p>
+                <p class="raleway ">
+                    <a class="ColorTwo" href="{{route('article.category', $article->category)}}">
+                        {{ __('ui.' . $article->category->name) }}
+                    </a>
+                </p>
                 <p class="raleway">{{ $article->body }}</p>
-                <p class="raleway text-small">Caricato da {{$article->user->name}}, il {{$article->created_at->format('d M Y')}}</p>
+                <p class="raleway text-small">{{ __('ui.publishedby')}}: {{$article->user->name}}, {{ __('ui.on')}}: {{$article->created_at->format('d M Y')}}</p>
             </div>
         </div>
     </div>

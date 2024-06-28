@@ -49,6 +49,11 @@ return [
     'date' => 'Data',
     'review' => 'Revisiona',
 
+    'publishedby' => 'Pubblicato da',
+    'on' => 'il',
+    'selectImg'=>'Seleziona immagine',
+    'selectFile'=>'Seleziona file',
+
     // Categorie
     'Abbigliamento' => 'Abbigliamento',
     'Accessori' => 'Accessori',
