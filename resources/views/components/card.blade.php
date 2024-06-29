@@ -19,7 +19,7 @@
 
                 @auth
 
-                <form action="{{ route('articles.favorite', $article->id) }}" method="POST" >
+                <form  action="{{ route('articles.favorite', $article->id) }}" method="POST" >
                     @csrf
                    
                     <button type="submit" class="btn shadow-none position-absolute top-0 end-0" style="outline: none;">

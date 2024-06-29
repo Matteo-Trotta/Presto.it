@@ -22,10 +22,13 @@
     {{-- SWIPER --}}
 
     @vite ( ['resources/css/app.css', 'resources/js/app.js'])
+    
+    @livewireStyles
 
 </head>
 
 <body class="bgColorTwo">
+
 
     <x-nav />
 
@@ -34,6 +37,8 @@
     </div>
 
     <x-foot />
+
+    
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
@@ -60,6 +65,9 @@
             },
         });
     </script>
+
+
+@livewireScripts
 
 </body>
 
