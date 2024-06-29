@@ -29,6 +29,9 @@ return [
     'detailAds'=>'Dettagli annuncio', 
     'dashboardTitle' => 'Dashboard revisore',
     'noArticlesToReview' => 'Nessun articolo da revisionare',
+    'preferiti' => 'Lista Desideri',
+    'favorites'=>'I tuoi preferiti',
+    'noFavorites' => 'Nessun annuncio preferito',
    
     'reject' => 'Rifiuta',
     'accept' => 'Accetta',

@@ -30,6 +30,9 @@ return [
     'noArticlesToReview' => 'No hay artículos para revisar',
     'editProfile' => 'Editar Perfil',
     'presto' => 'Presto.it',
+    'preferiti' => 'Lista de deseos',
+    'favorites' => 'Tus favoritos',
+    'noFavorites' => 'Ningún anuncio favorito',
    
     'reject' => 'Rechazar',
     'accept' => 'Aceptar',

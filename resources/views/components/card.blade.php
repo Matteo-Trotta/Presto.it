@@ -1,4 +1,4 @@
-<div class=" mb-4 bgColorThree   rounded shadowcard ">
+<div class=" mb-4 bgColorThree   rounded shadowcard position-relative ">
     <div class="row justify-content-center g-0">
         <div class=" d-flex justify-content-center col-12 col-lg-4 p-3">
             <a href="{{ route('article.show', compact('article')) }}"> <img
@@ -16,6 +16,24 @@
                 <p class="card-text fs-4">{{ $article->body }}</p>
                
                 <p class="d-flex justify-content-end align-items-center m-0">{{ __('ui.publishedby')}}: {{ $article->user->name }}, {{ $article->created_at->format('d M Y') }}</p>
+
+                @auth
+
+                <form action="{{ route('articles.favorite', $article->id) }}" method="POST" >
+                    @csrf
+                   
+                    <button type="submit" class="btn shadow-none position-absolute top-0 end-0" style="outline: none;">
+                        @if (Auth::user()->favorites->contains($article->id))
+                        <i class="fa-solid fa-heart fa-2x" style="color: #e60505;"></i>
+                        @else
+                        <i class="fa-regular fa-heart fa-2x" style="color: #e60505;"></i>
+                        @endif
+                    </button>
+                </form>
+
+                    
+                @endauth
+                
             </div>
         </div>
     </div>

@@ -54,6 +54,9 @@ return [
     'editProfile' => 'Profiel Bewerken',
 
     'presto' => 'Presto.it',
+    'preferiti' => 'Verlanglijstje',
+    'favorites' => 'Je favorieten',
+    'noFavorites' => 'Geen favoriete advertenties',
 
     // Categorieën
     'Abbigliamento' => 'Kleding',

@@ -1,26 +1,26 @@
 <footer style="background-image: url('/img/cart_home.jpg')" class="text-center text-lg-start text-muted bgHomeImage">
   <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 borderfooter ColorThree">
+  <section class="d-flex justify-content-center mt-5 justify-content-lg-between p-4 borderfooter ColorThree">
       {{-- Scritta sinistra footer --}}
       <div class="me-5 d-none d-lg-block">
           <span>{{ __('ui.stayConnected') }}</span>
       </div>
       
       {{-- icone social --}}
-      <div>
-          <a href="" class="me-4 text-reset">
+      <div >
+          <a href="" class="me-4 text-reset text-decoration-none">
               <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="" class="me-4 text-reset text-decoration-none">
               <i class="fab fa-twitter"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="" class="me-4 text-reset text-decoration-none">
               <i class="fab fa-google"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="" class="me-4 text-reset text-decoration-none">
               <i class="fab fa-instagram"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="" class="me-4 text-reset text-decoration-none">
               <i class="fab fa-linkedin"></i>
           </a>
           <a href="" class="me-4 text-reset">

@@ -29,6 +29,9 @@ return [
     'detailAds' => 'Anzeigendetails',
     'dashboardTitle' => 'Revisoren-Dashboard',
     'noArticlesToReview' => 'Keine Artikel zur Überprüfung',
+    'preferiti' => 'Wunschliste',
+    'favorites' => 'Deine Favoriten',
+    'noFavorites' => 'Keine bevorzugten Anzeigen',
 
     'reject' => 'Ablehnen',
     'accept' => 'Akzeptieren',

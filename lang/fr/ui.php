@@ -29,6 +29,9 @@ return [
     'detailAds' => 'Détails de l\'annonce',
     'dashboardTitle' => 'Tableau de bord du revisor',
     'noArticlesToReview' => 'Aucun article à réviser',
+    'preferiti' => 'Liste de souhaits',
+    'favorites' => 'Vos favoris',
+    'noFavorites' => 'Aucune annonce préférée',
 
     'reject' => 'Rejeter',
     'accept' => 'Accepter',

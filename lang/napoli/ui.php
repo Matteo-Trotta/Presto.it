@@ -55,6 +55,9 @@ return [
     'on' => 'ò',
     'selectImg'=>'Pigl na fot',
     'selectFile'=>'pigl nu file',
+    'preferiti' => 'Lista d o desiderio',
+'favorites' => 'E favoriti tuoi',
+'noFavorites' => 'Nisciun annuncio o prederito',
 
     // Categorie
     'Abbigliamento' => 'E_pann',
@@ -72,7 +75,7 @@ return [
     'Hobby' => 'Hobby',
     'Libri' => 'Carta',
     'Riviste' => 'Rivist',
-    'Nautica' => 'E barc',
+    'Nautica' => 'E_barc',
     'Sport' => 'ò_pallon',
     'Telefonia' => 'Celluar',
     'Ufficio' => 'Uffic',

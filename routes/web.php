@@ -5,6 +5,7 @@ use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\FavoriteController;
 
 // PUBLIC CONTROLLER
 
@@ -42,7 +43,16 @@ Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->n
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+    Route::post('/articles/{id}/favorite', [FavoriteController::class, 'toggleFavorite'])->name('articles.favorite');
+    Route::get('/favorites', [FavoriteController::class, 'index'])->name('favorites.index');
 });
 
 // cambio lingua
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
+
+
+// Preferiti
+// Route::middleware('auth')->group(function () {
+   
+// });

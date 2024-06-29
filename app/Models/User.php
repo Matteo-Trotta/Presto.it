@@ -57,4 +57,10 @@ class User extends Authenticatable
                 ? asset('storage/' . $this->profile_photo_path)
                 : asset('/img/user_default.jpg');
 }
+
+public function favorites()
+{
+    return $this->belongsToMany(Article::class, 'favorites');
+}
+
 }

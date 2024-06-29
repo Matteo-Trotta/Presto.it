@@ -49,7 +49,9 @@
                 </div>
             @endauth
             @guest
-                <div class="col-4"></div>
+                <div class="col-4">
+                    
+                </div>
             @endguest
             <button data-mdb-collapse-init class="col-4 d-flex justify-content-end align-items-center navbar-toggler shadow-none" type="button" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars fs-1 ColorFour"></i>
@@ -153,6 +155,9 @@
                             </li>
                             <li>
                                 <a href="{{ route('lavoraconnoi') }}" class="dropdown-item">{{ __('ui.workWithUs') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('favorites.index') }}" class="dropdown-item">{{ __('ui.preferiti') }}</a>
                             </li>
                             <li>
                                 <form action="{{ route('logout') }}" method="POST">

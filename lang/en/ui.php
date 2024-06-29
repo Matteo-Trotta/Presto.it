@@ -38,6 +38,9 @@ return [
     'dashboardTitle' => 'Revisor Dashboard',
     'presto' => 'Presto.it',
     'editProfile' => 'Edit Profile',
+    'preferiti' => 'Wishlist',
+    'favorites' => 'Your favorites',
+    'noFavorites' => 'No favorite listings',
 
     'reject' => 'Reject',
     'accept' => 'Accept',
