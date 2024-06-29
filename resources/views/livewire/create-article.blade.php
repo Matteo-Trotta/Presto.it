@@ -49,7 +49,7 @@
                 
                 <div class="mb-3">
                     <label class="form-label">{{ __('ui.price') }}</label>
-                    <input type="text" class="form-control shadow-none" wire:model.blur="price">
+                    <input type="number" class="form-control shadow-none" wire:model.blur="price">
                     @error('price')
                     <span class="text-danger">{{ $message }}</span>
                     @enderror

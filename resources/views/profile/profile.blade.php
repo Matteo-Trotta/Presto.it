@@ -4,7 +4,7 @@
     title="{{ __('ui.myProfile') }}"
     />
 <div class="container my-5">
-    <div class="row justify-content-center" >
+    <div class="row justify-content-center my-5" >
         <div class="col-5 d-flex justify-content-center bgColorThree rounded">
             <img src="{{ Auth::user()->profile_photo_url }}" alt="" class="rounded-circle border shadow my-5 img-fluid h" >
         </div>
