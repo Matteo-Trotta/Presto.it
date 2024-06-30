@@ -14,7 +14,7 @@ class FavoriteController extends Controller
         $article = Article::findOrFail($id);
         $user = Auth::user();
 
-        if ($user->favorites()->where('article_id', $id)->exists()) {
+        if ($user->favorites->where('article_id', $id)->exists()) {
             $user->favorites()->detach($id);
         } else {
             $user->favorites()->attach($id);
@@ -26,8 +26,8 @@ class FavoriteController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $favorites = $user->favorites()->get();
-
+        $favorites = $user->favorites;
+        dd($user->all());
         return view('favorites.index', compact('favorites'));
     }
 }

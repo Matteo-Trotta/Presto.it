@@ -5,9 +5,9 @@
 
     <div class="container my-5">
         
-        @if($favorites->isEmpty())
-            <p>{{ __('ui.nofavorites') }}</p>
-        @else
+        {{-- @if($favorited->isEmpty())
+            <p>{{ __('ui.noFavorites') }}</p>
+        @else --}}
             @foreach ($favorites as $article)
             <div class=" mb-4 bgColorThree   rounded shadowcard position-relative ">
                 <div class="row justify-content-center g-0">
@@ -44,7 +44,7 @@
             </div>
             
             @endforeach
-        @endif
+        {{-- @endif --}}
     </div>
 
 </x-layout>

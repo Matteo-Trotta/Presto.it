@@ -1,16 +1,14 @@
 <?php
 
+namespace App\Livewire;
 
-
-namespace App\Http\Livewire;
-
-use Livewire\Component;
 use App\Models\Article;
+use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
 class FavoriteButton extends Component
 {
-    public $article;
+     public $article;
     public $favorited;
 
     public function mount(Article $article)
@@ -37,4 +35,3 @@ class FavoriteButton extends Component
         return view('livewire.favorite-button');
     }
 }
-
