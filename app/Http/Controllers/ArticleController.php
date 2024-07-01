@@ -9,8 +9,9 @@ use Illuminate\Http\Request;
 class ArticleController extends Controller
 {
     public function category(Category $category){
-        $articles = $category->articles->where('is_accepted', true);
-        return view('article.category', compact('articles','category'));
+        $categories = $category->articles->where('is_accepted', true);
+        $articles = $category->articles()->get();
+        return view('article.category', compact('categories','articles','category'));
     }
     /**
      * Display a listing of the resource.

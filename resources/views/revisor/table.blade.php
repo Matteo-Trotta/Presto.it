@@ -7,7 +7,7 @@
                 <h1 class="fst-italic display-5 mt-5">
                     {{ __('ui.noArticlesToReview') }}
                 </h1>
-                <a href="{{ route('home') }}" class="mt-5 btn btnSubmit">{{ __('ui.backToHomepage') }}</a>
+                <a href="{{ route('home') }}" class="my-5 btn btnSubmit">{{ __('ui.backToHomepage') }}</a>
                 @if ($latest_article)
                     <form class="d-flex justify-content-center"
                         action="{{ route('undo', ['article' => $latest_article]) }}" method="POST">

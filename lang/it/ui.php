@@ -26,7 +26,7 @@ return [
     'addProfilePhoto' => 'Aggiungi foto profilo (opzionale)',
     'alreadyRegistered' => 'Sei già registrato?',
     'allArticles' => 'Tutti gli annunci',
-    'detailAds'=>'Dettagli annuncio', 
+    'detailAds'=>'Dettaglio annuncio', 
     'dashboardTitle' => 'Dashboard revisore',
     'noArticlesToReview' => 'Nessun articolo da revisionare',
     'preferiti' => 'Lista Desideri',

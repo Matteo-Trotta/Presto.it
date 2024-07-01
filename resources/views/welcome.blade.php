@@ -1,4 +1,4 @@
-<x-layout title="welcome">
+<x-layout title="{{ __('ui.presto') }}">
     <x-header title="{{ __('ui.presto') }}" />
 
     @if (session('message'))

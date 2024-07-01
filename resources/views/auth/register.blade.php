@@ -56,7 +56,7 @@
 
 
                     <div class="mb-3 text-center">
-                        <button type="submit" class="btn btn-primary btnSubmit">{{ __('ui.signUp') }}</button>
+                        <button type="submit" class=" btnSubmit">{{ __('ui.signUp') }}</button>
                     </div>
                     <div class="text-center mt-5">
                         <p>{{ __('ui.alreadyRegistered') }} <a href="{{ route('login') }}">{{ __('ui.login') }}</a>

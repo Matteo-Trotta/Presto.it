@@ -81,7 +81,7 @@
                     
                 </div>
                 <div class="mb-3 text-center">
-                    <button type="submit" class="btn btn-primary btnSubmit">{{ __('ui.publishAd') }}</button>
+                    <button type="submit" class="btnSubmit">{{ __('ui.publishAd') }}</button>
                 </div>
             </form>
         </div>
