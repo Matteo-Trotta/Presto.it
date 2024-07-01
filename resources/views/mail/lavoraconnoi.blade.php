@@ -4,7 +4,7 @@
   <div class="container py-5">
       <div class="row justify-content-center">
           <div class="col-12 col-md-8">
-              <form class="m-5" method="post" action="{{ route('become.revisor') }}">
+              <form class="m-5" method="POST" action="{{ route('become.revisor' )}}">
                   @csrf
 
                   <div class="mb-3">

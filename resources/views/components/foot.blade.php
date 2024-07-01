@@ -48,7 +48,7 @@
                     <div class="my-3 text-center ">
                         @auth
                             {{ __('ui.becomeRevisor') }}
-                            <a class="btn btn-outline" href="{{ route('become.revisor') }}">
+                            <a class="btn btn-outline" href="{{ route('become.revisore') }}">
                                 <span class="me-2 fs-6"><i class="fa-solid fa-plus"></i></span>{{ __('ui.sendRequest') }}
                             </a>
                         @endauth

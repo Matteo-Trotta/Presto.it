@@ -34,7 +34,8 @@ Route::patch('/undo/{article}', [RevisorController::class, 'undo'])->name('undo'
 
 
 // mail
-Route::get('/revisore/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
+Route::get('/revisore/richiedi', [RevisorController::class, 'becomeRevisor'])->name('become.revisore');
+Route::post('/revisore/richiedi', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 
