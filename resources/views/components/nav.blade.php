@@ -26,23 +26,23 @@
                     <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
                         <img src="{{ Auth::user()->profile_photo_url }}" class="profile-photo rounded-circle" height="50" alt="Profile Photo" loading="lazy" />
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdownMenuAvatar">
-                        <li class="pt-3 pb-1 text-center">
-                            <p class="">{{ __('ui.hello') }}, {{ Auth::user()->name }}</p>
+                    <ul class="dropdown-menu dropdown-menu-end bgColorThree " aria-labelledby="navbarDropdownMenuAvatar">
+                        <li class="pt-3 pb-1 text-center ">
+                            <p class="bgColorFour py-1">{{ __('ui.hello') }}, {{ Auth::user()->name }}</p>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{ route('profile') }}">{{ __('ui.myProfile') }}</a>
+                            <a class="dropdown-item ColorFour" href="{{ route('profile') }}">{{ __('ui.myProfile') }}</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{ route('article.create') }}">{{ __('ui.addAd') }}</a>
+                            <a class="dropdown-item ColorFour" href="{{ route('article.create') }}">{{ __('ui.addAd') }}</a>
                         </li>
                         <li>
-                            <a href="{{ route('become.revisor') }}" class="dropdown-item">{{ __('ui.workWithUs') }}</a>
+                            <a href="{{ route('become.revisor') }}" class="dropdown-item ColorFour">{{ __('ui.workWithUs') }}</a>
                         </li>
                         <li>
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button class="dropdown-item text-danger" type="submit">{{ __('ui.logout') }}</button>
+                                <button class="dropdown-item text-danger fw-bold" type="submit">{{ __('ui.logout') }}</button>
                             </form>
                         </li>
                     </ul>
@@ -143,7 +143,7 @@
                         <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
                             <img src="{{ Auth::user()->profile_photo_url }}" class="profile-photo rounded-circle" height="45px" width="45px" alt="Profile Photo" loading="lazy" />
                         </a>
-                        <ul class="dropdown-menu shadowcard dropdown-menu-end bgColorThree border-0 mt-2" aria-labelledby="navbarDropdownMenuAvatar">
+                        <ul class="dropdown-menu shadowcard dropdown-menu-end bgColorThree border-0 mt-2 rounded-0" aria-labelledby="navbarDropdownMenuAvatar">
                             <li class="pt-3 pb-1 text-center  border-0 rounded-0">
                                 <p class="py-1 bgColorFour fst-italic" >{{ __('ui.hello') }}, {{ Auth::user()->name }}</p>
                             </li>

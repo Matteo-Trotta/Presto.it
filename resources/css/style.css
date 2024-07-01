@@ -18,10 +18,10 @@ margin-top: 100px;
     font-weight: bold !important;
     
 }
-.navbar a:hover{
+/* .navbar a:hover{
     color: var(--colorfour) !important;
     
-}
+} */
 .varela{
     font-family: "Varela", sans-serif;
 }
@@ -63,7 +63,7 @@ margin-top: 100px;
 }
 
 .ColorFour {
-        color: var(--colorfour) !important;
+        color: var(--colorfour) ;
 }
 
 h1 {
@@ -83,6 +83,10 @@ h1 {
    
     
 } */
+ .dropdown-item{
+    --bs-dropdown-link-hover-bg: var(--colorfour);
+    --bs-dropdown-link-hover-color: var(--colorThree) !important;
+ }
 
 select {
     color: var(--colorThree) !important;
