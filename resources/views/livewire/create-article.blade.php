@@ -8,7 +8,7 @@
                 <div class="mb-3">
                     <div class="d-flex align-items-center">
                         <label class="me-5">{{ __('ui.selectImg') }}:</label>
-                        <label for="files" class="btnSubmit  d-flex justify-content-start shadow-none mt-2">{{ __('ui.selectFile') }}</label>
+                        <label for="files" class="btnSubmit ms-auto d-flex justify-content-start shadow-none mt-2">{{ __('ui.selectFile') }}</label>
                     </div>
                     <input style="visibility:hidden;"  id="files" type="file" wire:model.live="temporary_images" multiple
                     class="form-control shadow @error('temporary_images.*') is-invalid @enderror">

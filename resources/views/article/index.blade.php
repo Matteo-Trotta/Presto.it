@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="{{ __('ui.allArticles') }}">
 
     <x-header title="{{ __('ui.allArticles') }}"/>
 
