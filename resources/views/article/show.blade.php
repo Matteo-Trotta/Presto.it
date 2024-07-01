@@ -8,17 +8,7 @@
             
             @auth
 
-            <form action="{{ route('articles.favorite', $article->id) }}" method="POST">
-                @csrf
-               
-                <button type="submit" class="btn text-decoration-none shadow-none position-absolute top-0 end-0 mt-3 me-3">
-                    @if (Auth::user()->favorites->contains($article->id))
-                    <i class="fa-solid fa-heart fa-2x" style="color: #e60505;"></i>
-                    @else
-                    <i class="fa-regular fa-heart fa-2x" style="color: #e60505;"></i>
-                    @endif
-                </button>
-            </form>
+            <livewire:favorite-button :article='$article'/>
 
                 
             @endauth
