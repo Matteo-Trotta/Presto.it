@@ -10,6 +10,24 @@
             </div>
             @auth
                 <div class="dropdown col-4 d-flex justify-content-center align-items-center">
+                    <div class="dropdown me-3">
+                        <button class="btn bgColorFour ColorThree dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-earth-europe fa-xl"></i>
+                        </button>
+                        <ul class="dropdown-menu menuFlag dropdown-menu-end shadowcard">
+                            
+                          <li><a class="dropdown-item" ><x-_locale lang="it" /></a></li>
+                          <li><a class="dropdown-item" ><x-_locale lang="en" /></a></li>
+                          <li><a class="dropdown-item" ><x-_locale lang="es" /></a></li>
+                          <li><a class="dropdown-item" ><x-_locale lang="fr" /></a></li>
+                          <li><a class="dropdown-item" ><x-_locale lang="de" /></a></li>
+                          <li><a class="dropdown-item" ><x-_locale lang="nl" /></a></li>
+                          <li><a class="dropdown-item" ><x-_locale lang="napoli" /></a></li>
+                    
+    
+                        </ul>
+                      </div>
+
                     @if (Auth::user()->is_revisor)
                         <div class="dropdown">
                             <a data-mdb-dropdown-init class="text-reset me-4 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
@@ -67,7 +85,7 @@
                     {{-- <li class="nav-item">
                         <a class="text-center nav-link ColorTwo fs-5 fw-semibold" href="{{ route('home') }}">{{ __('ui.home') }}</a>
                     </li> --}}
-                    <li class="nav-item d-flex align-items-center">
+                    <li class="nav-item d-flex align-items-center justify-content-center">
                        <a href="{{ route('home') }}"> <i class="fa-solid fa-house ColorFour fs-3"></i></a>
                     </li>
                     <li class="nav-item">
