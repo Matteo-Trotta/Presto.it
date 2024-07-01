@@ -14,6 +14,7 @@ class FavoriteButton extends Component
     public function mount(Article $article)
     {
         $this->article = $article;
+        
         $this->favorited = Auth::user()->favorites->contains($article->id);
     }
 

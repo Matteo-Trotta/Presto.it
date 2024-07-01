@@ -5,9 +5,9 @@
 
     <div class="container my-5">
         
-        {{-- @if($favorited->isEmpty())
+        @if($favorites->isEmpty())
             <p>{{ __('ui.noFavorites') }}</p>
-        @else --}}
+        @else
             @foreach ($favorites as $article)
             <div class=" mb-4 bgColorThree   rounded shadowcard position-relative ">
                 <div class="row justify-content-center g-0">
@@ -28,23 +28,15 @@
                            
                             <p class="d-flex justify-content-end align-items-center m-0">{{ __('ui.publishedby')}}: {{ $article->user->name }}, {{ $article->created_at->format('d M Y') }}</p>
             
-                            <form action="{{ route('articles.favorite', $article->id) }}" method="POST">
-                                @csrf
-                                <button type="submit" class="btn shadow-none position-absolute top-0 end-0">
-                                    @if (Auth::user()->favorites->contains($article->id))
-                                    <i class="fa-solid fa-heart fa-2x" style="color: #e60505;"></i>
-                                    @else
-                                    <i class="fa-regular fa-heart fa-2x" style="color: #e60505;"></i>
-                                    @endif
-                                </button>
-                            </form>
+                            <livewire:favorite-button :article="$article"/>                  
+
                         </div>
                     </div>
                 </div>
             </div>
             
             @endforeach
-        {{-- @endif --}}
+        @endif
     </div>
 
 </x-layout>

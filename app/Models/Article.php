@@ -17,7 +17,7 @@ class Article extends Model
     use HasFactory;
 
 
-    protected $fillable = ['title', 'body', 'price', 'user_id','category_id'];
+    protected $fillable = ['title', 'body', 'price', 'user_id','category_id','article_id'];
 
     public function user(){
         return $this->belongsTo(User::class);
@@ -62,7 +62,7 @@ class Article extends Model
  }
 
  public function favoritedBy()
- {
+ { 
      return $this->belongsToMany(User::class, 'favorites');
  }
 

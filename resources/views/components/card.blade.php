@@ -17,25 +17,9 @@
                
                 <p class="d-flex justify-content-end align-items-center m-0">{{ __('ui.publishedby')}}: {{ $article->user->name }}, {{ $article->created_at->format('d M Y') }}</p>
 
-                @auth
-
-                {{-- <form wire:submit.prevent="toggleFavorite" method="POST" >
-                    @csrf --}}
-                   
-                    {{-- <button type="submit" class="btn shadow-none position-absolute top-0 end-0" style="outline: none;"> --}}
-                        {{-- @if (Auth::user()->favorites->contains($article->id))
-                        <i class="fa-solid fa-heart fa-2x" style="color: #e60505;"></i>
-                        @else
-                        <i class="fa-regular fa-heart fa-2x" style="color: #e60505;"></i>
-                        @endif --}}
-
-                        <livewire:favorite-button />
-                    {{-- </button>
-                </form> --}}
-
-                    
-                @endauth
-                
+                @auth              
+                    <livewire:favorite-button :article="$article"/>                  
+                @endauth                
             </div>
         </div>
     </div>

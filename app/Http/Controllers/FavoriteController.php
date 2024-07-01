@@ -27,8 +27,13 @@ class FavoriteController extends Controller
     {
         $user = Auth::user();
         $favorites = $user->favorites;
-        dd($user->all());
         return view('favorites.index', compact('favorites'));
+    }
+    public function delete(Article $article) {
+        $article->user->favorites()->detach();
+        $article->delete();
+        return back();
+
     }
 }
 
