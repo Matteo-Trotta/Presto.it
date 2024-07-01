@@ -15,7 +15,7 @@
                     <div class="row justify-content-center">
                         @for ($i = 0; $i < 1; $i++)
                             <div class="col-6 col-md-4 mb-4 text-center">
-                                <img src="https://picsum.photos/300" class="img-fluid rounded shadow "
+                                <img src="{{ $article->images->first()->getUrl(1200, 1200) }}" class="img-fluid rounded shadow "
                                     alt="immagine segnaposto">
                             </div>
                         @endfor

@@ -3,7 +3,7 @@
     <x-header2 title="{{ __('ui.detailAds') }}" />
 
     <div class="container mt-5">
-        <div class=" row justify-content-start bgColorThree mb-5 rounded mx-3 mx-md-0 position-relative p-5">
+        <div class=" row justify-content-start bgColorThree mb-5  rounded mx-3 mx-md-0  position-relative p-md-5 p-2">
 
 
             @auth
@@ -14,10 +14,10 @@
 
             @endauth
 
-            <div class="col-10 col-md-7 position-relative">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2  shadowcard rounded">
+            <div class="col-12 col-md-7 position-relative d-flex justify-content-center">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 shadowcard rounded d-flex justify-content-center">
                     @if ($article->images->count() > 0)
-                        <div class="swiper-wrapper ">
+                        <div class="swiper-wrapper">
                             @auth
                                 <div class="d-block d-md-none">
                                     <livewire:favorite-button :article="$article" />
@@ -26,7 +26,7 @@
 
                             @foreach ($article->images as $key => $image)
                                 <div class="swiper-slide rounded bgColorThree shadow">
-                                    <img class="rounded shadowImgCarousel " src="{{ $image->getUrl(1000, 600) }}"
+                                    <img class="rounded shadowImgCarousel " src="{{ $image->getUrl(1200, 1200) }}"
                                         alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
                                 </div>
                                 
@@ -42,12 +42,12 @@
                 </div>
                 @endif
 
-                <div thumbsSlider="" class="swiper mySwiper position-absolute bottom-0 end-0 px-2 py-3 mx-5 ms-5">
+                <div thumbsSlider="" class="swiper mySwiper position-absolute bottom-0">
                     <div class="swiper-wrapper">
                 
                         @foreach ($article->images as $key => $image)
                             <div class="swiper-slide shadowcard rounded">
-                                <img class="rounded" src="{{ $image->getUrl(1000, 600) }}"
+                                <img class="rounded" src="{{ $image->getUrl(1200, 1200) }}"
                                     alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
                             </div>
                         @endforeach

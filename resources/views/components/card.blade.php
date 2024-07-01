@@ -3,7 +3,7 @@
         <div class=" d-flex justify-content-center col-12 col-lg-5 p-3 position-relative">
             <a href="{{ route('article.show', compact('article')) }}"> <img
                     class=" img-fluid border rounded  borderimg shadowimg "
-                    src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(1000, 600) : '' }}"
+                    src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(1200, 1200) : '' }}"
                     alt="Immagine dell'articolo {{ $article->title }}">
                 <i class="fa-solid fa-eye fs-2 position-absolute ms-4 start-0 mt-2 ColorFour"></i>
             </a>
