@@ -28,7 +28,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
             @foreach ($articles as $article)
-                <div class="col-10 col-lg-6 mx-5">
+                <div class="col-11 col-md-10 col-lg-6 mx-5">
                     <x-card :article="$article" />
                 </div>
             @endforeach

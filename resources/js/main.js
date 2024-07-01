@@ -3,25 +3,26 @@
 
 // initMDB({ Dropdown, Collapse });
 
-const navbar =document.querySelector('.navbar');
+const navbar = document.querySelector('.navbar');
 console.log(navbar)
 
 // window.addEventListener('scroll', ()=>{
-    //     if (scrollY>0) {
+//     if (scrollY>0) {
 //         navbar.style.innerHtml = "top:" + 2 + "%";
 //     }
 // })
 // window.onscroll = function() {scrollFunction()};
-
-window.addEventListener('scroll', ()=>{
-    if (window.scrollY > 0) {
-        navbar.classList.add('scrolled');
-    } else{
-        navbar.classList.remove('scrolled')
-    }
-})
-
-document.addEventListener('DOMContentLoaded', function() {
+const mediaQuery = window.matchMedia('(min-width: 768px)')
+if (mediaQuery.matches) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled')
+        }
+    })
+}
+document.addEventListener('DOMContentLoaded', function () {
     const scrollableDiv = document.getElementById('scrollable-div');
     let isDown = false;
     let startX;

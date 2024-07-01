@@ -5,12 +5,23 @@
     <div class="container mt-5">
         <div class=" row justify-content-center bgColorThree pt-2 mb-5 rounded mx-3 mx-md-0 position-relative">
 
-            
+
             @auth
 
-            <livewire:favorite-button :article='$article'/>
+                <form action="{{ route('articles.favorite', $article->id) }}" method="POST">
+                    @csrf
 
-                
+                    <button type="submit"
+                        class="btn text-decoration-none shadow-none position-absolute top-0 end-0 mt-3 me-3">
+                        @if (Auth::user()->favorites->contains($article->id))
+                            <i class="fa-solid fa-heart fa-2x" style="color: #e60505;"></i>
+                        @else
+                            <i class="fa-regular fa-heart fa-2x" style="color: #e60505;"></i>
+                        @endif
+                    </button>
+                </form>
+
+
             @endauth
 
             <div class="col-10 col-md-6 ">
@@ -19,7 +30,7 @@
                         <div class="swiper-wrapper">
                             @foreach ($article->images as $key => $image)
                                 <div class="swiper-slide rounded  p-3 bgColorFour">
-                                    <img class="rounded shadowImgCarousel " src="{{ $image->getUrl(1000,600) }}"
+                                    <img class="rounded shadowImgCarousel " src="{{ $image->getUrl(1000, 600) }}"
                                         alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
                                 </div>
                             @endforeach
@@ -36,13 +47,13 @@
                     <div class="swiper-wrapper">
                         @foreach ($article->images as $key => $image)
                             <div class="swiper-slide shadowcard">
-                                <img src="{{ $image->getUrl(1000,600) }}"
+                                <img src="{{ $image->getUrl(1000, 600) }}"
                                     alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
                             </div>
                         @endforeach
 
                     </div>
-                 
+
                 </div>
             </div>
 
