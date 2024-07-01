@@ -8,19 +8,9 @@
 
             @auth
 
-                <form action="{{ route('articles.favorite', $article->id) }}" method="POST">
-                    @csrf
-
-                    <button type="submit"
-                        class="btn text-decoration-none shadow-none position-absolute top-0 end-0 mt-3 me-3">
-                        @if (Auth::user()->favorites->contains($article->id))
-                            <i class="fa-solid fa-heart fa-2x" style="color: #e60505;"></i>
-                        @else
-                            <i class="fa-regular fa-heart fa-2x" style="color: #e60505;"></i>
-                        @endif
-                    </button>
-                </form>
-
+                <div class="d-none d-md-block">
+                    <livewire:favorite-button :article="$article" />
+                </div>
 
             @endauth
 
@@ -28,8 +18,14 @@
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 ">
                     @if ($article->images->count() > 0)
                         <div class="swiper-wrapper">
+                            @auth
+                                <div class="d-block d-md-none">
+                                    <livewire:favorite-button :article="$article" />
+                                </div>
+                            @endauth
+
                             @foreach ($article->images as $key => $image)
-                                <div class="swiper-slide rounded  p-3 bgColorFour">
+                                <div class="swiper-slide rounded p-3 bgColorFour">
                                     <img class="rounded shadowImgCarousel " src="{{ $image->getUrl(1000, 600) }}"
                                         alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
                                 </div>
@@ -45,9 +41,10 @@
                 @endif
                 <div thumbsSlider="" class="swiper mySwiper">
                     <div class="swiper-wrapper">
+
                         @foreach ($article->images as $key => $image)
-                            <div class="swiper-slide shadowcard">
-                                <img src="{{ $image->getUrl(1000, 600) }}"
+                            <div class="swiper-slide shadowcard rounded">
+                                <img class="rounded" src="{{ $image->getUrl(1000, 600) }}"
                                     alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
                             </div>
                         @endforeach
@@ -58,16 +55,15 @@
             </div>
 
             <div class="col-10 col-md-6 ">
-                <h2 class="expletus">{{ $article->title }}</h2>
-                <h2 class="raleway ColorFour fs-4">{{ $article->price }} €</h2>
+                <h2 class="expletus ColorTwo display-3">{{ $article->title }}</h2>
+                <h2 class="raleway ColorFour ">{{ $article->price }} €</h2>
 
                 <p class="raleway ">
-                    <a class="ColorTwo" href="{{ route('article.category', $article->category) }}">
-                        {{ __('ui.' . $article->category->name) }}
+                    <a class="fs-3 ColorFour fw-bold" href="{{ route('article.category', $article->category) }}">#{{ __('ui.' . $article->category->name) }}
                     </a>
                 </p>
-                <p class="raleway">{{ $article->body }}</p>
-                <p class="raleway text-small">{{ __('ui.publishedby') }}: {{ $article->user->name }},
+                <p class="raleway fs-4 ColorTwo">{{ $article->body }}</p>
+                <p class="raleway fst-italic">{{ __('ui.publishedby') }}: {{ $article->user->name }},
                     {{ __('ui.on') }}: {{ $article->created_at->format('d M Y') }}</p>
             </div>
         </div>
