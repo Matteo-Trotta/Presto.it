@@ -52,6 +52,7 @@ Image::load ($srcPath)
     paddingY: 5,
     paddingUnit: Unit::Percent,
     position: AlignPosition::TopRight,
+    alpha: 60,
 
 )
 ->save($destPath);

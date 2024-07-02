@@ -67,8 +67,7 @@
                                 #{{ __('ui.' . $article->category->name) }}
                             </a>
                         </p>
-                        <p class="raleway">{{ $article->body }}</p>
-                        <p class="raleway raleway fst-italic">{{ __('ui.publishedby') }}: {{ $article->user->name }},
+                        <p class="raleway raleway fst-italic ColorTwo">{{ __('ui.publishedby') }}: {{ $article->user->name }},
                             {{ __('ui.on') }}: {{ $article->created_at->format('d M Y') }}</p>
                     </div>
 

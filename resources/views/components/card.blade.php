@@ -20,7 +20,7 @@
                 <h4 class="card-title ColorFour mb-3">{{ __('ui.price') }}: {{ $article->price }} €</h4>
 
 
-                <p class="d-flex position-relative position-lg-absolute bottom-0 end-0 me-4 fst-italic">
+                <p class="d-flex position-relative position-lg-absolute bottom-0 end-0 me-4 fst-italic ColorTwo">
                     {{ __('ui.publishedby') }}:
                     {{ $article->user->name }}, {{ $article->created_at->format('d M Y') }}</p>
 

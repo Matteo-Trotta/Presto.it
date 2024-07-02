@@ -28,19 +28,19 @@
                 <!-- Grid column -->
                 <div class="col-6 col-xl-2 col-md-4 col-lg-3 me-auto mb-4 text-center">
                     <!-- Content -->
-                    <h6 class="text-uppercase fw-bold mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4 varela">
                         <i class="fas fa-gem me-3"></i>Byte-Buster
                     </h6>
-                    <p>
+                    <p class="varela">
                         {{ __('ui.webDevelopmentTeam') }}
                     </p>
                     <img class="img-fluid" src="/img/logoblu-trasparente.png" alt="logo presto blu">
                     
                     <div class="my-3 text-center  ">
                         @auth
-                        {{ __('ui.becomeRevisor') }}
-                        <a class="btn btn-outline" href="{{ route('become.revisore') }}">
-                            <span class="me-2 fs-6"><i class="fa-solid fa-plus"></i></span>{{ __('ui.sendRequest') }}
+                        <span class="varela">{{ __('ui.becomeRevisor') }}</span>
+                        <a class="btn btn-outline " href="{{ route('become.revisore') }}">
+                            <span class="me-2 fs-6 "><i class="fa-solid fa-plus"></i></span>{{ __('ui.sendRequest') }}
                         </a>
                         @endauth
                     </div>
@@ -63,7 +63,7 @@
                                 alt="foto profilo">
                                 
                             </div>                         
-                        <p class=" col-6 me-auto">Pakòs</p>
+                        <p class=" col-6 me-auto varela">Pakòs</p>
                     
                     </div>
                 </a>
@@ -74,7 +74,7 @@
                                 <img src="/img/profileVeronica.jpeg" class="rounded-circle borderImgProfile"
                                 alt="foto profilo">                            
                         </div>
-                        <p class=" col-6   me-auto">Veronica</p>
+                        <p class=" col-6   me-auto varela">Veronica</p>
                 </div>
             </a>
 
@@ -85,7 +85,7 @@
                             <img src="/img/profileGiuliano.jpg" class="rounded-circle borderImgProfile"
                             alt="foto profilo">
                         </div>
-                        <p class=" col-6  me-auto">Giuliano</p>
+                        <p class=" col-6  me-auto varela">Giuliano</p>
                     
                 </div>
             </a>
@@ -96,7 +96,7 @@
                                 <img src="/img/profileMatteo.jpg" class="rounded-circle borderImgProfile"
                                 alt="foto profilo">
                         </div>
-                        <p class=" col-6  me-auto">Matteo</p>
+                        <p class=" col-6  me-auto varela">Matteo</p>
                     
                 </div>
             </a>
@@ -108,7 +108,7 @@
                             <img src="/img/profile-mirko.jpg" class="rounded-circle borderImgProfile"
                             alt="foto profilo">
                     </div>
-                    <p class=" col-6  me-auto">Mirko</p>
+                    <p class=" col-6  me-auto varela">Mirko</p>
                
 
                 </div>

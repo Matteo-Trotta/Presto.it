@@ -71,7 +71,7 @@
                     </a>
                 </p>
 
-                <p class="raleway fst-italic">{{ __('ui.publishedby') }}: {{ $article->user->name }},
+                <p class="raleway fst-italic ColorTwo">{{ __('ui.publishedby') }}: {{ $article->user->name }},
                     {{ __('ui.on') }}: {{ $article->created_at->format('d M Y') }}</p>
             </div>
             <div class=" mt-5 container">
