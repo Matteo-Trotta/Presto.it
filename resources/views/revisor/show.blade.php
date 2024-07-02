@@ -16,24 +16,19 @@
                 @if ($article->images->count() > 0)
                     <div class="col-12 col-md-7 position-relative d-flex justify-content-center">
                         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                            class="swiper mySwiper2 shadowcard rounded d-flex justify-content-center">
+                            class="swiper mySwiper2 shadowcard rounded d-flex justify-content-center mt-2">
 
                             <div class="swiper-wrapper">
                                 @foreach ($article->images as $key => $image)
                                     <div class="swiper-slide rounded bgColorThree shadow">
                                         <img class="rounded shadowImgCarousel " src="{{ $image->getUrl(1200, 1200) }}"
                                             alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
-                                        <div class="col-md-12 ps-3 position-absolute top-0 start-0 bgTransparent">
-                                            <h5 class="ColorFour">Labels</h5>
-                                            @if ($image->labels)
-                                                @foreach ($image->labels as $label)
-                                                  <span class="ColorFour">  #{{ $label }},</span>
-                                                @endforeach
-                                            @else
-                                                <p class="ColorFour">No labels</p>
-                                            @endif
-                                            <div
-                                                class="card-body d-flex justify-content-between flex-column flex-lg-row ">
+                                            <div class="col-md-12 ps-3 position-absolute top-0 start-0 bgTransparent_2">
+
+                                            </div>
+                                        <div class="col-md-12 ps-3 position-absolute top-0 start-0 bgTransparent d-flex d-lg-block">
+                                           
+                                            <div class="card-body col-6 col-lg-12 d-flex justify-content-lg-between flex-column flex-lg-row ">
                                                 <div class="row justify-content-start">
                                                     <div class="col-2">
                                                         <div class=" mx-auto  {{ $image->adult }}">
@@ -69,6 +64,15 @@
                                                     </div>
                                                     <div class="col-6 ColorFour text-start varela">Medical</div>
                                                 </div>
+                                            </div> 
+                                            <div class="d-flex flex-wrap justify-content-evenly bgTransparent_2 p-2 mt-2 rounded col-6 col-lg-12">
+                                                @if ($image->labels)
+                                                    @foreach ($image->labels as $label)
+                                                      <span class="ColorThree varela">  <i class="fa-solid fa-tag me-1"></i>{{ $label }} </span>
+                                                    @endforeach
+                                                @else
+                                                    <p class="ColorThree">No labels</p>
+                                                @endif
                                             </div>
                                         </div>
 
@@ -85,7 +89,7 @@
 
                         @if ($article->images->count() > 1)
                             <div thumbsSlider=""
-                                class="swiper bgTransparent mySwiper position-absolute bottom-0 d-none d-md-block">
+                                class="swiper bgTransparent mySwiper position-absolute bottom-0 d-none d-lg-block">
                                 <div class="swiper-wrapper">
                                     @foreach ($article->images as $key => $image)
                                         <div class="swiper-slide shadowcard rounded ">
@@ -106,9 +110,9 @@
                     </div>
                 @endif
 
-                <div class="col-10 col-md-4 ms-3">
-                    <div>
-                        <h2 class="expletus ColorTwo fs-1 fw-bold mt-3 mt-md-0">{{ $article->title }}</h2>
+                <div class="col-11 col-md-4 ms-3 text-center text-md-start">
+                    <div class="w-100">
+                        <h2 class="expletus ColorTwo fs-1 fw-bold mt-3 mt-md-0 w-100">{{ $article->title }}</h2>
                         <h2 class="raleway ColorFour">{{ $article->price }} €</h2>
 
                         <p class="raleway ">
@@ -122,7 +126,7 @@
                             {{ __('ui.on') }}: {{ $article->created_at->format('d M Y') }}</p>
                     </div>
 
-                    <div class="d-flex align-items-end pb-4 ">
+                    <div class="d-flex justify-content-center justify-content-md-start align-items-end pb-4 ">
                         <form action="{{ route('reject', ['article' => $article]) }}" method="POST">
                             @csrf
                             @method('PATCH')

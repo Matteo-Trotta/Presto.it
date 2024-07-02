@@ -241,6 +241,10 @@ label {
     background-color: rgba(35, 31, 32, 0.346);
     padding: 10px;
 }
+.bgTransparent_2{
+    background-color: rgba(247, 213, 59, 0.7);
+
+}
 /* FINE SWIPER */
 
 .scrolled {
