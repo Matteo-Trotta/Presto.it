@@ -8,6 +8,7 @@
                 <i class="fa-solid fa-eye fs-2 position-absolute ms-4 start-0 mt-2 ColorFour"></i>
             </a>
         </div>
+
         <div class="col-md-6  text-start d-flex justify-content-center p-3 pb-0 ">
             <div class="card-body d-flex flex-column">
                 <a href="{{ route('article.show', compact('article')) }}" class="text-decoration-none">
