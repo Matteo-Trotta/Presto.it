@@ -20,84 +20,82 @@
 
                             <div class="swiper-wrapper">
                                 @foreach ($article->images as $key => $image)
-                                    <div class="col-10">adult</div>
+                                    <div class="swiper-slide rounded bgColorThree shadow">
+                                        <img class="rounded shadowImgCarousel " src="{{ $image->getUrl(1200, 1200) }}"
+                                            alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
+                                    </div>
+                                @endforeach
+
                             </div>
-                            <div class="swiper-slide rounded bgColorThree shadow">
-                                <img class="rounded shadowImgCarousel " src="{{ $image->getUrl(1200, 1200) }}"
-                                    alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
+
+                            @if ($article->images->count() > 1)
+                                <div class="swiper-button-next ColorFour me-2"></div>
+                                <div class="swiper-button-prev ColorFour ms-2"></div>
+                            @endif
+                        </div>
+
+                        @if ($article->images->count() > 1)
+                            <div thumbsSlider="" class="swiper bgTransparent mySwiper position-absolute bottom-0">
+                                <div class="swiper-wrapper">
+                                    @foreach ($article->images as $key => $image)
+                                        <div class="swiper-slide shadowcard rounded ">
+                                            <img src="{{ $image->getUrl(1200, 1200) }}"
+                                                alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
+                                        </div>
+                                    @endforeach
+
+                                </div>
                             </div>
-                            
-                @endforeach
+                        @endif
 
-            </div>
-
-            @if ($article->images->count() > 1)
-                <div class="swiper-button-next ColorFour me-2"></div>
-                <div class="swiper-button-prev ColorFour ms-2"></div>
-            @endif
-    </div>
-
-    @if ($article->images->count() > 1)
-        <div thumbsSlider="" class="swiper bgTransparent mySwiper position-absolute bottom-0">
-            <div class="swiper-wrapper">
-                @foreach ($article->images as $key => $image)
-                    <div class="swiper-slide shadowcard rounded ">
-                        <img src="{{ $image->getUrl(1200, 1200) }}"
-                            alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
                     </div>
-                @endforeach
+                @else
+                    <div class="col-12 col-md-7 position-relative d-flex justify-content-center">
+                        <img class="img-fluid rounded" src="https://picsum.photos/1200/1200"
+                            alt="Nessuna foto inserita">
+                    </div>
+                @endif
 
+                <div class="col-10 col-md-4 ms-3">
+                    <div>
+                        <h2 class="expletus ColorTwo fs-1 fw-bold">{{ $article->title }}</h2>
+                        <h2 class="raleway ColorFour">{{ $article->price }} €</h2>
+
+                        <p class="raleway ">
+                            <a class="fs-3 ColorFour fw-bold"
+                                href="{{ route('article.category', $article->category) }}">
+                                #{{ __('ui.' . $article->category->name) }}
+                            </a>
+                        </p>
+                        <p class="raleway raleway fst-italic ColorTwo">{{ __('ui.publishedby') }}: {{ $article->user->name }},
+                            {{ __('ui.on') }}: {{ $article->created_at->format('d M Y') }}</p>
+                    </div>
+
+                    <div class="d-flex align-items-end pb-4 ">
+                        <form action="{{ route('reject', ['article' => $article]) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button class="btn btnSubmit3 ColorTwo me-3 fw-bold ">{{ __('ui.reject') }}</button>
+                        </form>
+                        <form action="{{ route('accept', ['article' => $article]) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button class="btn btnSubmit  fw-bold ">{{ __('ui.accept') }}</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class=" mt-5 container">
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <h3 class="expletus fs-2 ColorTwo text-center mb-5 border-top pt-5">
+                                {{ __('ui.description') }}:
+                            </h3>
+                            <p class="raleway fs-5 ColorTwo">{{ $article->body }}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    @endif
-
-    </div>
-@else
-    <div class="col-12 col-md-7 position-relative d-flex justify-content-center">
-        <img class="img-fluid rounded" src="https://picsum.photos/1200/1200" alt="Nessuna foto inserita">
-    </div>
-    @endif
-
-    <div class="col-10 col-md-4 ms-3">
-        <div>
-            <h2 class="expletus ColorTwo fs-1 fw-bold">{{ $article->title }}</h2>
-            <h2 class="raleway ColorFour">{{ $article->price }} €</h2>
-
-            <p class="raleway ">
-                <a class="fs-3 ColorFour fw-bold" href="{{ route('article.category', $article->category) }}">
-                    #{{ __('ui.' . $article->category->name) }}
-                </a>
-            </p>
-            <p class="raleway raleway fst-italic ColorTwo">{{ __('ui.publishedby') }}:
-                {{ $article->user->name }},
-                {{ __('ui.on') }}: {{ $article->created_at->format('d M Y') }}</p>
-        </div>
-
-        <div class="d-flex align-items-end pb-4 ">
-            <form action="{{ route('reject', ['article' => $article]) }}" method="POST">
-                @csrf
-                @method('PATCH')
-                <button class="btn btnSubmit3 ColorTwo me-3 fw-bold ">{{ __('ui.reject') }}</button>
-            </form>
-            <form action="{{ route('accept', ['article' => $article]) }}" method="POST">
-                @csrf
-                @method('PATCH')
-                <button class="btn btnSubmit  fw-bold ">{{ __('ui.accept') }}</button>
-            </form>
-        </div>
-    </div>
-
-    <div class=" mt-5 container">
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <h3 class="expletus fs-2 ColorTwo text-center mb-5 border-top pt-5">
-                    {{ __('ui.description') }}:
-                </h3>
-                <p class="raleway fs-5 ColorTwo">{{ $article->body }}</p>
-            </div>
-        </div>
-    </div>
-    </div>
     </div>
 
 
