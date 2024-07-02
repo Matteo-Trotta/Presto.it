@@ -3,9 +3,11 @@
 namespace App\Jobs;
 
 use Spatie\Image\Image;
-use Illuminate\Bus\Queueable;
+use Spatie\Image\Enums\Unit;
 
+use Illuminate\Bus\Queueable;
 use Spatie\Image\Enums\CropPosition;
+use Spatie\Image\Enums\AlignPosition;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -42,6 +44,18 @@ $destPath = storage_path() . '/app/public/' . $this->path . "/crop_{$w}x{$h}_" .
 
 Image::load ($srcPath)
 ->crop($w, $h, CropPosition::Center)
+->watermark( 
+    base_path('public/img/logobarra.png'),
+    width: 100,
+    height: 100,
+    paddingX: 5,
+    paddingY: 5,
+    paddingUnit: Unit::Percent,
+    position: AlignPosition::TopRight,
+
+)
 ->save($destPath);
+
+
     }
 }
