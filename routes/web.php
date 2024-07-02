@@ -55,5 +55,5 @@ Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('s
 
 // Preferiti
 // Route::middleware('auth')->group(function () {
-   
+
 // });
