@@ -6,29 +6,34 @@
 
 
 }
-*{
+
+* {
     font-family: "Raleway", sans-serif;
 }
-.titolo{
-margin-top: 100px;
+
+.titolo {
+    margin-top: 100px;
 }
 
 .navbar a {
     font-family: "Raleway", sans-serif;
     font-weight: bold !important;
-    
+
 }
+
 /* .navbar a:hover{
     color: var(--colorfour) !important;
     
 } */
-.varela{
+.varela {
     font-family: "Varela", sans-serif;
 }
-.expletus{
+
+.expletus {
     font-family: "Expletus Sans", sans-serif;
 }
-.raleway{
+
+.raleway {
     font-family: "Raleway", sans-serif;
 }
 
@@ -55,7 +60,7 @@ margin-top: 100px;
 }
 
 .ColorTwo {
-    color: var(--colorTwo) ;
+    color: var(--colorTwo);
 }
 
 .ColorThree {
@@ -63,7 +68,7 @@ margin-top: 100px;
 }
 
 .ColorFour {
-        color: var(--colorfour) ;
+    color: var(--colorfour);
 }
 
 h1 {
@@ -83,10 +88,10 @@ h1 {
    
     
 } */
- .dropdown-item{
+.dropdown-item {
     --bs-dropdown-link-hover-bg: var(--colorfour);
     --bs-dropdown-link-hover-color: var(--colorThree) !important;
- }
+}
 
 select {
     color: var(--colorThree) !important;
@@ -98,7 +103,7 @@ label {
     font-family: "Expletus Sans", sans-serif;
 }
 
-.btnSubmit{
+.btnSubmit {
     background-color: var(--colorTwo);
     border: 1px solid var(--colorThree);
     color: var(--colorThree);
@@ -107,18 +112,19 @@ label {
     border-radius: 10px;
     padding: 5px 20px;
     margin-top: 10px;
-    
-    
-    
+
+
+
 }
-.btnSubmit:hover{
+
+.btnSubmit:hover {
     background-color: var(--colorfour);
     border: 1px solid var(--colorfour);
     color: var(--colorThree);
 
 }
 
-.btnSubmit2{
+.btnSubmit2 {
     background-color: var(--colorfour);
     border: 1px solid var(--colorThree);
     color: var(--colorThree);
@@ -128,19 +134,20 @@ label {
     padding: 5px 20px;
     margin-top: 10px;
     text-transform: uppercase;
-    
-    
+
+
 }
-.btnSubmit2:hover{
-   
+
+.btnSubmit2:hover {
+
     color: var(--colorThree);
-    box-shadow:none !important;
-   
+    box-shadow: none !important;
+
 
 }
 
-.btnSubmit3{
-    background-color:  rgb(241, 70, 70);
+.btnSubmit3 {
+    background-color: rgb(241, 70, 70);
     border: 1px solid rgb(175, 2, 2);
     color: rgb(89, 1, 1);
     font-family: "Expletus Sans", sans-serif;
@@ -148,14 +155,15 @@ label {
     border-radius: 10px;
     padding: 5px 20px;
     margin-top: 10px;
-    
-    
+
+
 }
-.btnSubmit3:hover{
-   
-    background-color:red;
-    box-shadow:none !important;
-   
+
+.btnSubmit3:hover {
+
+    background-color: red;
+    box-shadow: none !important;
+
 
 }
 
@@ -168,7 +176,8 @@ label {
     bottom: 10px;
     color: var(--colorThree);
 }
-.marginTop{
+
+.marginTop {
     margin-top: 80px;
 }
 
@@ -237,14 +246,17 @@ label {
     height: 100%;
     object-fit: cover;
 }
-.bgTransparent{
+
+.bgTransparent {
     background-color: rgba(35, 31, 32, 0.346);
     padding: 10px;
 }
-.bgTransparent_2{
+
+.bgTransparent_2 {
     background-color: rgba(247, 213, 59, 0.7);
 
 }
+
 /* FINE SWIPER */
 
 .scrolled {
@@ -271,66 +283,70 @@ label {
     color: var(--colorThree);
 }
 
-.borderimg{
-    border: none !important;    
+.borderimg {
+    border: none !important;
 }
 
-.shadowimg{
-    box-shadow:-2px 5px 10px var(--colorOne);
+.shadowimg {
+    box-shadow: -2px 5px 10px var(--colorOne);
 }
 
-.anchorCard:hover{
+.anchorCard:hover {
     text-decoration: underline var(--colorTwo) !important;
-    
+
 }
 
-.bgHomeImage{
+.bgHomeImage {
     background-repeat: no-repeat;
-    background-position:center center;
+    background-position: center center;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.vh-50{
+.vh-50 {
     height: 80vh;
 }
 
-.shadowcard{
-    box-shadow:2px 2px 8px var(--colorOne);   
+.shadowcard {
+    box-shadow: 2px 2px 8px var(--colorOne);
 }
 
 
-.borderImgProfile{
+.borderImgProfile {
     border: 1px solid var(--colorThree);
     width: 65px;
     height: 65px;
 
 }
-.borderfooter{
 
-border-bottom: 3px solid var(--colorThree);
+.borderfooter {
+
+    border-bottom: 3px solid var(--colorThree);
 
 }
-footer::before{
+
+footer::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(247, 213, 59, 0.379),rgba(247, 213, 59,1));
+    background: linear-gradient(rgba(247, 213, 59, 0.379), rgba(247, 213, 59, 1));
     top: 0;
     left: 0;
 }
+
 /* table */
 /* table {
     border-radius: 25px;
   } */
-.table{
-    --bs-table-striped-color: var(--colorTwo)!important;
-    --bs-table-striped-bg: var(--colorThree)!important;
+.table {
+    --bs-table-striped-color: var(--colorTwo) !important;
+    --bs-table-striped-bg: var(--colorThree) !important;
     --bs-table-bg: rgba(56, 134, 151, 0.586) !important;
     --bs-table-color: var(--colorTwo) !important;
 }
-tr{
+
+tr {
     border-bottom: 2px solid var(--colorfour);
 }
 
@@ -338,10 +354,10 @@ tr{
     border: solid 2px var(--colorfour);
 }
 
-::placeholder{
+::placeholder {
     font-family: "Expletus Sans", sans-serif;
     color: var(--colorThree) !important;
-    
+
 }
 
 
@@ -388,29 +404,33 @@ tr{
     border-left: none;
   } */
 
-  .colHeight{
+.colHeight {
     height: 8vh;
-  }
+}
 
 
-  /* Per Webkit (Chrome, Safari) */
+/* Per Webkit (Chrome, Safari) */
 .custom-scrollbar {
-    -webkit-overflow-scrolling: touch; /* Abilita lo scorrimento dolce su dispositivi touch */
+    -webkit-overflow-scrolling: touch;
+    /* Abilita lo scorrimento dolce su dispositivi touch */
     overflow: scroll;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-    display: none; /* Nasconde la barra di scorrimento su Webkit (Chrome, Safari) */
+    display: none;
+    /* Nasconde la barra di scorrimento su Webkit (Chrome, Safari) */
 }
 
 /* Per Firefox */
 .custom-scrollbar {
-    scrollbar-width: none; /* Nasconde la barra di scorrimento su Firefox */
+    scrollbar-width: none;
+    /* Nasconde la barra di scorrimento su Firefox */
 }
 
 /* Per Internet Explorer e Edge */
 .custom-scrollbar {
-    -ms-overflow-style: none; /* Nasconde la barra di scorrimento su Internet Explorer e Edge */
+    -ms-overflow-style: none;
+    /* Nasconde la barra di scorrimento su Internet Explorer e Edge */
 }
 
 /* Classe per lo stato attivo del div scorrevole */
@@ -419,44 +439,44 @@ tr{
     cursor: -webkit-grabbing;
 }
 
-.menuFlag{
+.menuFlag {
     --bs-dropdown-min-width: none;
 }
-.img-preview{
+
+.img-preview {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 120px;
     height: 120px;
 }
-.shadowImgCarousel{
+
+.shadowImgCarousel {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
 }
 
-.h{
+.h {
     height: 300px;
 }
-.w{
+
+.w {
     width: 300px;
-   
+
 }
 
-.napoli{
+.napoli {
     background-image: url('/public/img/napoli.jpg');
 }
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button
-{
-   -webkit-appearance: none;
-   margin: 0;
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 
 
 
-
-
-
-
-
+.hover:hover {
+    color: var(--colorfour);
+}

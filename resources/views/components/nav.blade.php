@@ -14,7 +14,7 @@
                         <button class="btn bgColorFour ColorThree dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-earth-europe fa-xl"></i>
                         </button>
-                        <ul class="dropdown-menu menuFlag dropdown-menu-end shadowcard">
+                        <ul class="dropdown-menu menuFlag dropdown-menu-end shadowcard bgColorThree">
                             
                           <li><a class="dropdown-item" ><x-_locale lang="it" /></a></li>
                           <li><a class="dropdown-item" ><x-_locale lang="en" /></a></li>
@@ -89,7 +89,7 @@
                        <a href="{{ route('home') }}"> <i class="fa-solid fa-house ColorFour fs-3"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-center nav-link ColorTwo fs-5 fw-semibold" href="{{ route('article.index') }}">{{ __('ui.ads') }}</a>
+                        <a class=" hover text-center nav-link ColorTwo fs-5 fw-semibold" href="{{ route('article.index') }}">{{ __('ui.ads') }}</a>
                     </li>
                     @guest
                         <li class="nav-item">
@@ -126,7 +126,7 @@
                     <button class="btn bgColorFour ColorThree dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-earth-europe fa-xl"></i>
                     </button>
-                    <ul class="dropdown-menu menuFlag dropdown-menu-end shadowcard">
+                    <ul class="dropdown-menu menuFlag dropdown-menu-end shadowcard bgColorThree">
                         
                       <li><a class="dropdown-item" ><x-_locale lang="it" /></a></li>
                       <li><a class="dropdown-item" ><x-_locale lang="en" /></a></li>
