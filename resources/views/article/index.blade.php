@@ -12,10 +12,14 @@
     <div class="container-fluid">
         <div class="row justify-content-center mt-4">
             @foreach ($articles as $article)
-                <div class="col-7">
+                <div class="col-11 col-md-10 col-lg-6 mx-5">
                     <x-card :article="$article" />
                 </div>
             @endforeach
+
+
+
+
             <div class="mt-4 ColorFour">
                 {{ $articles->links('pagination::bootstrap-5') }}
             </div>
@@ -24,4 +28,3 @@
 
 
 </x-layout>
-

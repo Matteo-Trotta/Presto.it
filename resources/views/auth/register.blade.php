@@ -18,7 +18,7 @@
                         @error('images')
                             <p class="text-danger">{{$message}}</p>
                         @enderror
-                        <div id="preview" class="row border-success rounded shadow py-4 mt-3 bgColorThree"></div>
+                        <div id="preview" class="row border-success "></div>
                     </div>
 
                     <div class="mb-3">
@@ -76,7 +76,7 @@
                 const imgDiv = document.createElement('div');
                 imgDiv.classList.add('col', 'd-flex', 'flex-column', 'align-items-center', 'my-3');
                 imgDiv.innerHTML = `
-                    <div class="img-preview mx-auto shadow rounded position-relative z-1" style="background-image: url(${e.target.result});">
+                    <div class=" rounded shadow py-4 mt-3 bgColorThree img-preview mx-auto position-relative z-1" style="background-image: url(${e.target.result});">
                         <button type="button" class="btn px-1 py-0 mt-1 me-1 m-0 btn-outline-danger position-absolute end-0 top-0 z-2" onclick="removeImage(this)"><i class="fa-solid fa-x"></i></button>
                     </div>`;
                 preview.appendChild(imgDiv);
