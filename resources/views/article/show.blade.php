@@ -27,7 +27,7 @@
 
                             @foreach ($article->images as $key => $image)
                                 <div class="swiper-slide rounded bgColorThree shadow">
-                                    <img class="rounded shadowImgCarousel " src="{{ $image->getUrl(1200, 1200) }}"
+                                    <img class="rounded shadowImgCarousel " src="{{ $image->getUrl() }}"
                                         alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
                                 </div>
                             @endforeach
@@ -44,7 +44,7 @@
 
                                 @foreach ($article->images as $key => $image)
                                     <div class="swiper-slide shadowcard rounded">
-                                        <img class="rounded" src="{{ $image->getUrl(1200, 1200) }}"
+                                        <img class="rounded" src="{{ $image->getUrl() }}"
                                             alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}" />
                                     </div>
                                 @endforeach

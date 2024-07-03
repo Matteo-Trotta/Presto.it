@@ -58,7 +58,7 @@ class CreateArticle extends Component
                 $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
 
                 RemoveFaces::withChain([
-                    new ResizeImage($newImage->path, 1200, 1200),
+                    new ResizeImage($newImage->path, 350, 350),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
@@ -73,7 +73,7 @@ class CreateArticle extends Component
     public function updatedTemporaryImages()
     {
         if ($this->validate([
-            'temporary_images.*' => 'image|max:10240',
+            'temporary_images.*' => 'image|max:5240',
             'temporary_images' => 'max:6'
         ])) {
 
