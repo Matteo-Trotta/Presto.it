@@ -46,16 +46,16 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end bgColorThree " aria-labelledby="navbarDropdownMenuAvatar">
                         <li class="pt-3 pb-1 text-center ">
-                            <p class="bgColorFour py-1">{{ __('ui.hello') }}, {{ Auth::user()->name }}</p>
+                            <p class="bgColorTwo py-1">{{ __('ui.hello') }}, {{ Auth::user()->name }}</p>
                         </li>
                         <li>
-                            <a class="dropdown-item ColorFour" href="{{ route('profile') }}">{{ __('ui.myProfile') }}</a>
+                            <a class="dropdown-item ColorTwo" href="{{ route('profile') }}">{{ __('ui.myProfile') }}</a>
                         </li>
                         <li>
-                            <a class="dropdown-item ColorFour" href="{{ route('article.create') }}">{{ __('ui.addAd') }}</a>
+                            <a class="dropdown-item ColorTwo" href="{{ route('article.create') }}">{{ __('ui.addAd') }}</a>
                         </li>
                         <li>
-                            <a href="{{ route('become.revisor') }}" class="dropdown-item ColorFour">{{ __('ui.workWithUs') }}</a>
+                            <a href="{{ route('become.revisor') }}" class="dropdown-item ColorTwo">{{ __('ui.workWithUs') }}</a>
                         </li>
                         <li>
                             <form action="{{ route('logout') }}" method="POST">
@@ -166,16 +166,16 @@
                                 <p class="py-1 bgColorFour fst-italic" >{{ __('ui.hello') }}, {{ Auth::user()->name }}</p>
                             </li>
                             <li>
-                                <a class="dropdown-item ColorFour" href="{{ route('profile') }}">{{ __('ui.myProfile') }}</a>
+                                <a class="dropdown-item ColorTwo" href="{{ route('profile') }}">{{ __('ui.myProfile') }}</a>
                             </li>
                             <li>
-                                <a class="dropdown-item ColorFour" href="{{ route('article.create') }}">{{ __('ui.addAd') }}</a>
+                                <a class="dropdown-item ColorTwo" href="{{ route('article.create') }}">{{ __('ui.addAd') }}</a>
                             </li>
                             <li>
-                                <a href="{{ route('lavoraconnoi') }}" class="dropdown-item ColorFour">{{ __('ui.workWithUs') }}</a>
+                                <a href="{{ route('lavoraconnoi') }}" class="dropdown-item ColorTwo">{{ __('ui.workWithUs') }}</a>
                             </li>
                             <li>
-                                <a href="{{ route('favorites.index') }}" class="dropdown-item ColorFour">{{ __('ui.preferiti') }}</a>
+                                <a href="{{ route('favorites.index') }}" class="dropdown-item ColorTwo">{{ __('ui.preferiti') }}</a>
                             </li>
                             <li>
                                 <form action="{{ route('logout') }}" method="POST">
