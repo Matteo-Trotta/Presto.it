@@ -73,6 +73,13 @@
 
                 <p class="raleway fst-italic ColorTwo">{{ __('ui.publishedby') }}: {{ $article->user->name }},
                     {{ __('ui.on') }}: {{ $article->created_at->format('d M Y') }}</p>
+                    @if (Auth::user()->is_revisor)
+                    <form action="{{ route('reject', ['article' => $article]) }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button class="btn btnSubmit3 ColorTwo me-3 fw-bold ">{{ __('ui.reject') }}</button>
+                    </form>
+                    @endif
             </div>
             <div class=" mt-5 container">
                 <div class="row justify-content-center">

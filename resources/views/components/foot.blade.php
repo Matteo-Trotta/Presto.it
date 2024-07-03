@@ -37,12 +37,14 @@
                     <img class="img-fluid" src="/img/logoblu-trasparente.png" alt="logo presto blu">
                     
                     <div class="my-3 text-center  ">
-                        @auth
+                        @Auth
+                        @if (!Auth::user()->is_revisor)
                         <span class="varela">{{ __('ui.becomeRevisor') }}</span>
                         <a class="btn btn-outline " href="{{ route('become.revisore') }}">
                             <span class="me-2 fs-6 "><i class="fa-solid fa-plus"></i></span>{{ __('ui.sendRequest') }}
                         </a>
-                        @endauth
+                       @endif
+                       @endauth
                     </div>
                 </div>
                 <!-- Grid column -->

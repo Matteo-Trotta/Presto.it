@@ -45,6 +45,7 @@
                                 </li>
                             </ul>
                         </div>
+                       
                     @endif
                     <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                         id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
@@ -202,10 +203,12 @@
                                 <a class="dropdown-item ColorTwo"
                                     href="{{ route('article.create') }}">{{ __('ui.addAd') }}</a>
                             </li>
+                            @if (!Auth::user()->is_revisor)
                             <li>
                                 <a href="{{ route('lavoraconnoi') }}"
                                     class="dropdown-item ColorTwo">{{ __('ui.workWithUs') }}</a>
                             </li>
+                            @endif
                             <li>
                                 <a href="{{ route('favorites.index') }}"
                                     class="dropdown-item ColorTwo">{{ __('ui.preferiti') }}</a>
