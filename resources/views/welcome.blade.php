@@ -2,7 +2,8 @@
     <x-header title="{{ __('ui.presto') }}" />
 
     @if (session('message'))
-        <div class="alert alert-success mt-2">
+        <div class="alert alert-success mt-2
+        text-center">
             {{ session('message') }}
         </div>
     @endif

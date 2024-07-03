@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Livewire\WithPagination;
 
 class ArticleController extends Controller
-{
+{ 
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public function category(Category $category){
         $categories = $category->articles->where('is_accepted', true);
         $articles = $category->articles()->get();
@@ -43,7 +46,9 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
+        
         return view('article.show', compact('article'));
+        
     }
 
     /**

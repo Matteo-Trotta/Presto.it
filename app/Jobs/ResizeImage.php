@@ -48,11 +48,11 @@ Image::load ($srcPath)
     base_path('public/img/logobarra.png'),
     width: 100,
     height: 100,
-    paddingX: 5,
-    paddingY: 5,
+    paddingX: 0,
+    paddingY: 0,
     paddingUnit: Unit::Percent,
-    position: AlignPosition::TopRight,
-    alpha: 60,
+    position: AlignPosition::Center,
+    alpha: 50,
 
 )
 ->save($destPath);

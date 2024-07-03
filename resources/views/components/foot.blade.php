@@ -1,6 +1,6 @@
 <footer style="background-image: url('/img/cart_home.jpg')" class="text-center text-lg-start text-muted bgHomeImage position-relative">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-center mt-5 justify-content-lg-between p-4 borderfooter ColorThree z-2 position-relative">
+    <section class="d-flex justify-content-center mt-5 justify-content-lg-end p-4 borderfooter ColorThree z-2 position-relative">
         {{-- Scritta sinistra footer --}}
         <div class="me-5 d-none d-lg-block">
             <span>{{ __('ui.stayConnected') }}</span>
@@ -8,13 +8,13 @@
         
         {{-- icone social --}}
         <div>
-            <a href="https://www.facebook.com/profile.php?id=61561639625735" class="me-4 text-reset text-decoration-none">
+            <a href="https://www.facebook.com/profile.php?id=61561639625735" class="mx-4  text-reset text-decoration-none">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/bytebuster144/" class="me-4 text-reset text-decoration-none">
+            <a href="https://www.instagram.com/bytebuster144/" class="mx-4 text-reset text-decoration-none">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://github.com/ByteBuster144?tab=repositories" class="me-4 text-reset">
+            <a href="https://github.com/ByteBuster144?tab=repositories" class="mx-4 text-reset">
                 <i class="fab fa-github"></i>
             </a>
         </div>

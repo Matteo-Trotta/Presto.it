@@ -1,6 +1,6 @@
 <x-layout title="{{ __('ui.allArticles') }}">
 
-    <x-header title="{{ __('ui.allArticles') }}"/>
+    <x-header title="{{ __('ui.allArticles') }}" />
 
     <div class="my-3 text-center">
         @auth
@@ -16,7 +16,12 @@
                     <x-card :article="$article" />
                 </div>
             @endforeach
+            <div class="mt-4 ColorFour">
+                {{ $articles->links('pagination::bootstrap-5') }}
+            </div>
         </div>
     </div>
 
+
 </x-layout>
+

@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Jobs;
+
 use App\Models\Image;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
@@ -121,8 +123,3 @@ class GoogleVisionSafeSearch implements ShouldQueue
 //         $i->save();
 //     }
 // }
-
-
-
-
-
