@@ -8,9 +8,9 @@
                     <div class="mb-3">
                         <div class="d-flex align-items-center">
                             <label class="me-5">{{ __('ui.selectImg') }}:</label>
-                            <label for="files" class="btnSubmit ms-auto d-flex justify-content-start shadow-none mt-2">{{ __('ui.selectFile') }}</label>
+                            <label for="profile_photo" class="btnSubmit ms-auto d-flex justify-content-start shadow-none mt-2">{{ __('ui.addProfilePhoto') }}</label>
                         </div>
-                        <input style="visibility:hidden;" id="files" type="file" name="images[]" multiple
+                        <input style="visibility:hidden;" id="profile_photo" type="file" name="profile_photo" multiple
                         class="form-control shadow @error('images.*') is-invalid @enderror">
                         @error('images.*')
                             <p class="text-danger">{{$message}}</p>
@@ -66,7 +66,7 @@
 </x-layout>
 
 <script>
-    document.getElementById('files').addEventListener('change', function(event) {
+    document.getElementById('profile_photo').addEventListener('change', function(event) {
         const files = event.target.files;
         const preview = document.getElementById('preview');
         preview.innerHTML = '';
