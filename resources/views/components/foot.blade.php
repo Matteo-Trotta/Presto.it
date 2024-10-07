@@ -127,7 +127,7 @@
 <div class="text-center p-4 z-2 position-relative" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2024 Copyright:
     <a class="text-reset fw-bold"
-    href="https://s2.pictoa.com/media/galleries/300/170/3001706021c5f7c8431/39046876021c5f9b9890.gif">Byte-Busters</a>
+    href="#">Byte-Busters</a>
 </div>
 <!-- Copyright -->
 </footer>
